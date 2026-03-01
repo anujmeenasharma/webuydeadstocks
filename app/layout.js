@@ -1,7 +1,14 @@
 import ClientLayout from "./clientLayout";
-import Footer from "./components/Partials/Footer";
-import Navbar from "./components/Partials/Navbar";
+import Navbar from "@/components/Partials/Navbar";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Partials/Footer";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={montserrat.variable}>
         <ClientLayout>
           <Navbar />
           {children}
