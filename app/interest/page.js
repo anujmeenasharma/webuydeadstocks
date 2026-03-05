@@ -17,7 +17,7 @@ export default function Interest() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <section  id="categories">
+    <div  id="categories" className='h-fit w-full relative'>
         <div className="relative h-[50vh] w-full">
                     <Image
                         src="/images/carrer.webp"
@@ -75,6 +75,6 @@ export default function Interest() {
         </div>
       </div>
     </section>
-    </section>
+    </div>
   );
 }

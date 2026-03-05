@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Search } from "lucide-react";
 import { fetchBlogData } from "@/lib/shopify";
+import { useLenis } from "lenis/react";
 
 
 
@@ -13,6 +14,16 @@ const BlogPage = () => {
     const [pageInfo, setPageInfo] = useState({ hasNextPage: false, endCursor: null });
     const [loading, setLoading] = useState(true);
     const [filtering, setFiltering] = useState(false);
+    const lenis = useLenis();
+
+    useEffect(() => {
+        if (lenis) {
+            // slightly delay the resize to ensure DOM has updated with new images/content
+            setTimeout(() => {
+                lenis.resize();
+            }, 100);
+        }
+    }, [blogs, lenis]);
 
     useEffect(() => {
         const loadBlogs = async () => {
