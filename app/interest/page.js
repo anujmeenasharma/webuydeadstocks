@@ -20,10 +20,10 @@ export default function Interest() {
     <section  id="categories">
         <div className="relative h-[50vh] w-full">
                     <Image
-                        src="/images/categories/c1.webp"
+                        src="/images/carrer.webp"
                         alt="Some title"
                         fill
-                        className="object-cover"
+                        className="object-cover object-[50%_4 0%]"
                         priority
                     />
                 {/* Dark overlay */}
@@ -41,13 +41,13 @@ export default function Interest() {
                         Back
                     </Link>
                     
-                    <div className="text-white text-lg mb-3 tracking-wide">
-                        Dead Stock Blog
-                    </div>
-                    
-                    <h1 className="text-white text-4xl sm:text-4xl lg:text-4xl font-bold leading-tight max-w-5xl">
-                        Some title
+                    <h1 className="text-white text-6xl sm:text-6xl lg:text-6xl font-medium leading-tight max-w-5xl">
+                        Our Interest
                     </h1>
+
+                    <div className="text-white text-lg mb-3 tracking-wide max-w-5xl">
+                        We purchase a wide range of used and unused surplus, overstock or dead inventory and scrap from multiple industries, including manufacturing, construction, IT and retail. Discover the stocks we love.
+                    </div>
                 </div>
         </div>
         <Category categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />

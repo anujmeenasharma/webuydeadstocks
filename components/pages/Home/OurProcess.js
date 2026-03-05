@@ -1,11 +1,10 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
-if (typeof window !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
-}
+gsap.registerPlugin(ScrollTrigger);
 
 const items = [
     {
@@ -13,28 +12,28 @@ const items = [
         number: '01',
         title: 'TELL US WHAT YOU HAVE IN STOCK',
         desc: 'Fill in our inventory evaluation form, or simply schedule a meeting with us.',
-        image: 'https://images.unsplash.com/photo-1586528116311-ad8ed7c80a30?q=80&w=2670&auto=format&fit=crop'
+        image: '/Assets/MapImg/Step-1.webp'
     },
     {
         id: 2,
         number: '02',
         title: 'WE WILL MAKE AN OFFER YOU CANNOT REFUSE',
         desc: "We'll evaluate your inventory for free and provide you with a cash offer",
-        image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2670&auto=format&fit=crop'
+        image: '/Assets/MapImg/Step-2.webp'
     },
     {
         id: 3,
         number: '03',
         title: 'WE PICK UP YOUR DEAD STOCK ON TIME',
         desc: "Happy with our offer? We'll arrange pickup for you.",
-        image: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb2b?q=80&w=2670&auto=format&fit=crop'
+        image: '/Assets/MapImg/Step-3.webp'
     },
     {
         id: 4,
         number: '04',
         title: 'CASH IS DEPOSITED STRAIGHT TO YOUR ACCOUNT',
         desc: 'Cash Is Deposited Straight To Your Account',
-        image: 'https://images.unsplash.com/photo-1580519542036-ed47d3eac3f7?q=80&w=2670&auto=format&fit=crop'
+        image: '/Assets/MapImg/Step-4.webp'
     }
 ];
 
@@ -45,59 +44,54 @@ const OurProcess = () => {
     const headingRef = useRef(null);
     const numbersContainerRef = useRef(null);
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: 'top top',
-                    end: '+=300%',
-                    scrub: 1,
-                    pin: true,
-                }
-            });
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: 'top top',
+                end: '+=300%',
+                scrub: 1,
+                pin: true,
+            }
+        });
 
-            cardsRef.current.forEach((card, index) => {
-                if (index === 0) return;
+        cardsRef.current.forEach((card, index) => {
+            if (index === 0) return;
 
-                gsap.set(card, { y: '100%' });
+            gsap.set(card, { y: '100%' });
 
-                tl.to(card, {
-                    y: index * 40,
-                    duration: 1,
-                    ease: 'none'
-                }, index - 1);
-            });
-
-            tl.to(headingRef.current, {
-                y: -150,
-                opacity: 0,
+            tl.to(card, {
+                y: index * 40,
                 duration: 1,
                 ease: 'none'
-            }, 0);
+            }, index - 1);
+        });
 
-            tl.to(numbersContainerRef.current, {
-                yPercent: -25,
-                duration: 1,
-                ease: 'none'
-            }, 0);
+        tl.to(headingRef.current, {
+            y: -150,
+            opacity: 0,
+            duration: 1,
+            ease: 'none'
+        }, 0);
 
-            tl.to(numbersContainerRef.current, {
-                yPercent: -50,
-                duration: 1,
-                ease: 'none'
-            }, 1);
+        tl.to(numbersContainerRef.current, {
+            yPercent: -25,
+            duration: 1,
+            ease: 'none'
+        }, 0);
 
-            tl.to(numbersContainerRef.current, {
-                yPercent: -75,
-                duration: 1,
-                ease: 'none'
-            }, 2);
+        tl.to(numbersContainerRef.current, {
+            yPercent: -50,
+            duration: 1,
+            ease: 'none'
+        }, 1);
 
-        }, sectionRef);
-
-        return () => ctx.revert();
-    }, []);
+        tl.to(numbersContainerRef.current, {
+            yPercent: -75,
+            duration: 1,
+            ease: 'none'
+        }, 2);
+    }, { scope: sectionRef });
 
     return (
         <section ref={sectionRef} className="relative w-full bg-black text-white h-screen overflow-hidden">

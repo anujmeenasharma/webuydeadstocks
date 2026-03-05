@@ -6,18 +6,21 @@ import Pricing from "@/components/pages/Home/Pricing";
 import TrustedSection from "@/components/pages/Home/TrustedSection";
 import OurProcess from "@/components/pages/Home/OurProcess";
 import Recycling from "@/components/pages/Home/Recycling";
+import MapSection from "@/components/pages/Home/MapSection";
+import ScrollMaps from "@/components/pages/Home/ScrollMaps";
 
 const page = () => {
   return (
     <div>
       <Landing />
-      {/* <TextReveal />
+      <TextReveal />
+      <ScrollMaps />
+      <OurProcess />
       <OurInterest />
-      <LatestBlogs />
       <Pricing />
       <TrustedSection />
-      <OurProcess /> */}
       <Recycling />
+      <LatestBlogs />
     </div>
   )
 }

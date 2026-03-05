@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Career() {
+export default function Environment() {
 
   return (
     <section  id="categories">
         <div className="relative h-[50vh] w-full">
                     <Image
-                        src="/images/categories/c1.webp"
+                        src="/images/Environment-Back.webp"
                         alt="Some title"
                         fill
                         className="object-cover"
@@ -30,13 +30,13 @@ export default function Career() {
                         Back
                     </Link>
                     
-                    <div className="text-white text-lg mb-3 tracking-wide">
-                        Dead Stock Blog
-                    </div>
-                    
-                    <h1 className="text-white text-4xl sm:text-4xl lg:text-4xl font-bold leading-tight max-w-5xl">
-                        Some title
+                    <h1 className="text-white text-6xl sm:text-6xl lg:text-6xl font-medium leading-tight max-w-5xl">
+                        We Re-sell Responsibly
                     </h1>
+
+                    <div className="text-white text-lg mb-3 max-w-5xl pt-2">
+                        We help you move dead stock responsibly by buying it and selling it to developing countries. This approach not only reduces waste but also supports affordable access to goods in emerging markets. By choosing this sustainable solution, you're making a positive impact on both your bottom line and the environment.
+                    </div>
                 </div>
         </div>
             <div className="min-h-screen bg-white px-6 py-16 sm:px-12 lg:px-24">

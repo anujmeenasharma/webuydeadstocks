@@ -13,7 +13,7 @@ export default function Career() {
     <section  id="categories">
         <div className="relative h-[50vh] w-full">
                     <Image
-                        src="/images/categories/c1.webp"
+                        src="/images/carrer.webp"
                         alt="Some title"
                         fill
                         className="object-cover"
@@ -32,15 +32,13 @@ export default function Career() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
                         Back
-                    </Link>
-                    
-                    <div className="text-white text-lg mb-3 tracking-wide">
-                        Dead Stock Blog
-                    </div>
-                    
-                    <h1 className="text-white text-4xl sm:text-4xl lg:text-4xl font-bold leading-tight max-w-5xl">
-                        Some title
+                    </Link> 
+                    <h1 className="text-white text-6xl sm:text-6xl lg:text-6xl font-medium leading-tight max-w-5xl">
+                        Join us
                     </h1>
+                    <div className="text-white text-lg mb-3 tracking-wide">
+                        Join The Largest Dead Stock Buyer In The GCC Region
+                    </div>
                 </div>
         </div>
             <div className="min-h-screen bg-white px-6 py-16 sm:px-12 lg:px-24">

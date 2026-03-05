@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
+import Image from "next/image";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -150,14 +151,7 @@ const Recycling = () => {
                     <div className="w-full md:w-1/2 flex flex-col sm:flex-row">
                         <div className="flex-1 bg-[#57853A] p-8 md:p-14 text-white">
                             <div className="mb-6 h-12 w-12 flex items-center justify-center">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                                    <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-                                    <path d="M3 3v5h5" />
-                                    <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
-                                    <path d="M16 21v-5h5" />
-                                    <path d="M12 9v2m0 4v2" />
-                                    <path d="M10 11.5a2.5 2.5 0 0 1 5 0c0 2-5 1-5 3a2.5 2.5 0 0 0 5 0" />
-                                </svg>
+                                <Image src="/images/ArrowCounterClockwise.svg" alt="ArrowCounterClockwise" width={48} height={48} />
                             </div>
                             <h3 className="text-2xl md:text-[32px] font-bold leading-none mb-4 tracking-tight">
                                 WE RESELL YOUR<br />DEAD INVENTORY
@@ -168,10 +162,8 @@ const Recycling = () => {
                         </div>
 
                         <div className="flex-1 bg-[#2D2D2D] p-8 md:p-14 text-white">
-                            <div className="mb-6 h-12 w-12 flex items-center justify-center bg-white rounded-md">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2D2D2D" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
+                            <div className="mb-6 h-12 w-12 flex items-center justify-center rounded-md">
+                                <Image src="/images/ShieldCheck.svg" alt="ShieldCheck" width={48} height={48} />
                             </div>
                             <h3 className="text-2xl md:text-[32px] font-bold leading-none mb-4 tracking-tight">
                                 BRAND<br />PROTECTION

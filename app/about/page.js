@@ -10,7 +10,7 @@ export default function AboutUs() {
         {/* Background Image Overlay */}
         <div className="absolute inset-0">
           <img
-            src="/api/placeholder/1920/1080"
+            src="/images/back.webp"
             alt="Warehouse"
             className="w-full h-full object-cover opacity-60"
           />
@@ -94,7 +94,7 @@ export default function AboutUs() {
             {/* Right Column - Image */}
             <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/api/placeholder/800/900"
+                src="/images/desc.webp"
                 alt="Warehouse Manager"
                 className="w-full h-full object-cover"
               />
@@ -108,7 +108,7 @@ export default function AboutUs() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/api/placeholder/1920/1080"
+            src="/images/OurCommit.webp"
             alt="Sustainability"
             className="w-full h-full object-cover"
           />
@@ -132,16 +132,7 @@ export default function AboutUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-gray-900">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0">
-          <img
-            src="/api/placeholder/1920/800"
-            alt="Stock Management"
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
-
+      <section className="relative py-24 md:py-32 overflow-hidden bg-black/90">
         {/* Content */}
         <div className="relative text-center mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl text-white mb-8 leading-tight">

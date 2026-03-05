@@ -104,8 +104,8 @@ const Pricing = () => {
 
     return (
         <div ref={containerRef} className="h-screen w-full bg-[#ce3e3e] relative overflow-hidden flex flex-col pt-20">
-            <div className="flex justify-between w-full px-[5%] absolute top-[15%] left-0 right-0 z-10">
-                <div className="w-[45%] grid">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-0 justify-between w-full px-[5%] absolute top-[15%] left-0 right-0 z-10">
+                <div className="w-full md:w-[45%] grid">
                     <h2 className="title-1 col-start-1 row-start-1 text-white text-3xl md:text-5xl lg:text-5xl font-bold w-full leading-tight z-10">
                         Current value of your<br />Dead Stock
                     </h2>
@@ -113,7 +113,7 @@ const Pricing = () => {
                         We Offer Fair & Upfront<br />Pricing
                     </h2>
                 </div>
-                <div className="w-[45%] grid overflow-hidden items-start pb-4">
+                <div className="w-full md:w-[45%] grid overflow-hidden items-start pb-4">
                     <p className="subtitle-1 col-start-1 row-start-1 text-white text-xs md:text-sm lg:text-base leading-relaxed font-light z-10">
                         That 100% investment you made? Its valuehas now drastically dropped.
                         With no buyers and no movement, your dead stock is losing worth every

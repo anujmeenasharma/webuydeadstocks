@@ -1,20 +1,21 @@
+import Link from 'next/link';
 import React from 'react';
 
 const blogData = [
     {
-        image: "/images/blog-1.jpg",
+        image: "/images/blog-1.webp",
         category: "Dead Stock Blog",
         title: "Selling non-moving inventory in the UAE: Quick Returns Guide",
         date: "11/12/2025, 11:40"
     },
     {
-        image: "/images/blog-2.jpg",
+        image: "/images/blog-2.webp",
         category: "Dead Stock Blog",
         title: "Free Up Warehouse Space in UAE | Fast Dead Stock Solutions",
         date: "15/12/2025, 10:23"
     },
     {
-        image: "/images/blog-3.jpg",
+        image: "/images/blog-3.webp",
         category: "Dead Stock Blog",
         title: "Smart Clearance: Cash for Dead Stocks | Trusted Buyer UAE",
         date: "21/12/2025, 02:32"
@@ -64,11 +65,10 @@ const LatestBlogs = () => {
                         </div>
                     ))}
                 </div>
-
                 <div className="flex justify-center mt-16 md:mt-20">
-                    <button className="border border-[#8CC63F] text-[#8CC63F] px-10 py-3 text-[14px] font-semibold rounded hover:bg-[#8CC63F] hover:text-white transition-all duration-300 uppercase tracking-widest cursor-pointer">
+                    <Link href="/blogs" className="border border-[#8CC63F] text-[#8CC63F] px-10 py-3 text-[14px] font-semibold rounded hover:bg-[#8CC63F] hover:text-white transition-all duration-300 uppercase tracking-widest cursor-pointer">
                         VIEW ALL
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>
