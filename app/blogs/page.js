@@ -180,7 +180,20 @@ const BlogPage = () => {
                     </>
                 )}
             </section>
-        </div >
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Blog",
+                        "name": "We Buy Dead Stocks Blog",
+                        "url": "https://www.webuydeadstocks.com/blogs",
+                        "description": "Discover insights, tips, and stories to inform and inspire your journey."
+                    })
+                }}
+            />
+        </div>
     );
 };
 

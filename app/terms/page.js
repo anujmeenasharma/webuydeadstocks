@@ -2,6 +2,11 @@ import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
+export const metadata = {
+    title: "Terms and Conditions",
+    description: "Terms and Conditions for We Buy Dead Stocks",
+};
+
 export default function Terms() {
     return (
         <div className="min-h-screen bg-white">
@@ -125,6 +130,18 @@ export default function Terms() {
                     </div>
                 </section>
             </div>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": "Terms and Conditions - We Buy Dead Stocks",
+                        "url": "https://www.webuydeadstocks.com/terms"
+                    })
+                }}
+            />
         </div>
     );
 }

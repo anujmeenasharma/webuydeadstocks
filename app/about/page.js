@@ -55,7 +55,7 @@ export default function AboutUs() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Trust Us, We're Experts At Dead Stock Liquidation
               </h2>
-              
+
               <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                 We understand that every client's product is different, and that is
                 why our dead stock liquidation evaluations are never cookie-
@@ -215,6 +215,23 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About Us - We Buy Dead Stocks",
+            "url": "https://www.webuydeadstocks.com/about",
+            "description": "Established in 2003, We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "We Buy Dead Stocks"
+            }
+          })
+        }}
+      />
     </div>
   );
 }

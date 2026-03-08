@@ -38,8 +38,7 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "HOME", href: "/" },
-    { label: "GET FREE\nVALUATION", href: "https://www.webuydeadstock.com/get-free-valuation-dead-stocks" },
-    { label: "OUR INTEREST", href: "/interest" },
+    { label: "SERVICES", href: "/services" },
     { label: "ABOUT US", href: "/about" },
     { label: "BLOGS", href: "/blogs" },
     { label: "BOOK A CALL", href: "https://calendly.com/webuydeadstocks-info/30min?primary_color=80d741" },
@@ -48,54 +47,57 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full py-4 px-6 lg:px-10 flex items-center justify-between fixed top-0 z-40">
-        <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.png" alt="Logo" width={150} height={150} />
+      <nav className="w-full flex items-center justify-between fixed top-0 z-40" style={{ padding: 'min(1.1vw, 16px) min(1.6vw, 23px)', paddingLeft: 'min(2vw, 40px)' }}>
+        <Link href="/" className="flex items-center" style={{ gap: 'min(0.8vw, 12px)' }}>
+          <Image src="/logo.png" alt="Logo" width={150} height={150} style={{ width: 'min(10.4vw, 150px)', height: 'auto' }} />
         </Link>
 
-        <div className="flex items-center gap-4 lg:gap-8">
-          <div className="hidden lg:flex items-center gap-8">
+        <div className="flex items-center" style={{ gap: 'min(1.8vw, 26px)' }}>
+          <div className="hidden lg:flex items-center" style={{ gap: 'min(2vw, 32px)' }}>
             <div
               className="relative"
               onMouseEnter={() => setIsLangOpen(true)}
               onMouseLeave={() => setIsLangOpen(false)}
             >
-              <div className="flex items-center gap-1.5 cursor-pointer text-[#84CC16] p-2 -ml-2">
-                <span className="text-xl leading-none">文A</span>
-                <ChevronDown strokeWidth={2} className={`w-4 h-4 mt-0.5 transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} />
+              <div className="flex items-center cursor-pointer text-[#84CC16]" style={{ gap: 'min(0.3vw, 6px)', padding: 'min(0.5vw, 8px)', marginLeft: 'max(-0.5vw, -8px)', fontSize: 'min(1.25vw, 20px)' }}>
+                <span className="leading-none">文A</span>
+                <ChevronDown strokeWidth={2} className={`mt-0.5 transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} style={{ width: 'min(1vw, 16px)', height: 'min(1vw, 16px)' }} />
               </div>
 
               <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[120px] bg-white rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col py-1.5 z-50 transition-all duration-300 ${isLangOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}
+                className={`absolute top-full left-1/2 -translate-x-1/2 bg-white rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col z-50 transition-all duration-300 ${isLangOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}
+                style={{ marginTop: 'min(0.3vw, 4px)', width: 'min(8.3vw, 120px)', paddingBlock: 'min(0.3vw, 6px)' }}
               >
                 <button
                   onClick={() => { switchLanguage('en'); setIsLangOpen(false); }}
-                  className="px-4 py-2 text-center text-[#333333] text-[15px] font-medium hover:bg-gray-50 hover:text-[#84CC16] transition-colors"
+                  className="text-center text-[#333333] font-medium hover:bg-gray-50 hover:text-[#84CC16] transition-colors"
+                  style={{ padding: 'min(0.5vw, 8px) min(1vw, 16px)', fontSize: 'min(1.04vw, 15px)' }}
                 >
                   English
                 </button>
                 <button
                   onClick={() => { switchLanguage('ar'); setIsLangOpen(false); }}
-                  className="px-4 py-2 text-center text-[#333333] text-[15px] font-medium hover:bg-gray-50 hover:text-[#84CC16] transition-colors"
+                  className="text-center text-[#333333] font-medium hover:bg-gray-50 hover:text-[#84CC16] transition-colors"
+                  style={{ padding: 'min(0.5vw, 8px) min(1vw, 16px)', fontSize: 'min(1.04vw, 15px)' }}
                 >
                   العربية
                 </button>
               </div>
             </div>
-            <Link href="https://www.webuydeadstock.com/get-free-valuation-dead-stocks" className="text-white text-sm font-semibold tracking-wider uppercase hover:text-gray-300 transition-colors">
+            <Link href="https://www.webuydeadstock.com/get-free-valuation-dead-stocks" className="text-white font-semibold tracking-wider uppercase hover:text-gray-300 transition-colors" style={{ fontSize: 'min(0.97vw, 14px)' }}>
               GET A FREE VALUATION
             </Link>
-            <Link href="https://calendly.com/webuydeadstocks-info/30min?primary_color=80d741" className="flex items-center justify-center bg-white text-black text-sm font-bold tracking-wider uppercase px-6 py-2.5 hover:bg-gray-100">
+            <Link href="https://calendly.com/webuydeadstocks-info/30min?primary_color=80d741" className="flex items-center justify-center bg-white text-black font-bold tracking-wider uppercase hover:bg-gray-100" style={{ fontSize: 'min(0.97vw, 14px)', padding: 'min(0.7vw, 10px) min(1.6vw, 24px)' }}>
               BOOK A CALL
             </Link>
           </div>
 
-          <Link href="#" className="flex items-center justify-center bg-white text-black text-sm font-bold tracking-wider uppercase px-6 py-2.5 hover:bg-gray-100 transition-colors">
+          <Link href="/contact" className="flex items-center justify-center bg-white text-black font-bold tracking-wider uppercase hover:bg-gray-100 transition-colors" style={{ fontSize: 'min(0.97vw, 14px)', padding: 'min(0.7vw, 10px) min(1.6vw, 24px)' }}>
             CONTACT US
           </Link>
-          <button onClick={toggleSidebar} className="flex flex-col cursor-pointer gap-[6px] focus:outline-none lg:ml-4">
-            <div className="w-8 h-[2px] bg-white"></div>
-            <div className="w-8 h-[2px] bg-white"></div>
+          <button onClick={toggleSidebar} className="flex flex-col cursor-pointer focus:outline-none" style={{ gap: 'min(0.42vw, 6px)', marginLeft: 'min(1vw, 16px)' }}>
+            <div className="bg-white" style={{ width: 'min(2.2vw, 32px)', height: 'min(0.14vw, 2px)' }}></div>
+            <div className="bg-white" style={{ width: 'min(2.2vw, 32px)', height: 'min(0.14vw, 2px)' }}></div>
           </button>
         </div>
       </nav>
@@ -110,29 +112,31 @@ const Navbar = () => {
       {/* SIDEBAR CONTAINER */}
       <div
         ref={container}
-        className={`fixed top-0 right-0 h-screen w-full md:w-[480px] bg-[#118B50] z-50 transform transition-transform duration-500 ease-in-out flex flex-col ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-screen w-full bg-[#118B50] z-50 transform transition-transform duration-500 ease-in-out flex flex-col ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
           }`}
+        style={{ maxWidth: 'min(33.3vw, 480px)' }}
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 flex flex-col justify-end">
-          <div className="opacity-[0.05] text-white font-black leading-[0.85] tracking-tighter w-full pb-8 whitespace-nowrap" style={{ fontSize: 'clamp(3rem, 15vw, 6rem)' }}>
-            <div className="pl-4">WE BUY DEAD</div>
-            <div className="pl-4">STOCKS</div>
+          <div className="opacity-[0.05] text-white font-black leading-[0.85] tracking-tighter w-full whitespace-nowrap" style={{ fontSize: 'clamp(3rem, 4.2vw, 6rem)', paddingBottom: 'min(1.6vw, 32px)' }}>
+            <div style={{ paddingLeft: 'min(0.8vw, 16px)' }}>WE BUY DEAD</div>
+            <div style={{ paddingLeft: 'min(0.8vw, 16px)' }}>STOCKS</div>
           </div>
         </div>
 
-        <div className="flex justify-end p-6 md:p-8 relative z-10">
+        <div className="flex justify-end relative z-10" style={{ padding: 'min(1.6vw, 32px) min(2vw, 32px)' }}>
           <button onClick={toggleSidebar} className="text-white hover:text-gray-200 transition-colors cursor-pointer">
-            <X className="w-10 h-10" strokeWidth={1} />
+            <X strokeWidth={1} style={{ width: 'min(2.5vw, 40px)', height: 'min(2.5vw, 40px)' }} />
           </button>
         </div>
 
-        <div className="flex-1 flex flex-col justify-center px-8 md:px-12 relative z-10">
-          <nav className="flex flex-col items-end gap-6 md:gap-8">
+        <div className="flex-1 flex flex-col justify-center relative z-10" style={{ padding: '0 min(2.5vw, 48px)' }}>
+          <nav className="flex flex-col items-end" style={{ gap: 'min(1.4vw, 32px)' }}>
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="group flex flex-col cursor-pointer text-white text-3xl md:text-[40px] font-normal tracking-wide hover:text-gray-200 transition-colors uppercase text-left leading-tight"
+                className="group flex flex-col cursor-pointer text-white font-normal tracking-wide hover:text-gray-200 transition-colors uppercase text-left leading-tight"
+                style={{ fontSize: 'min(2.1vw, 40px)' }}
                 onClick={toggleSidebar}
               >
                 {link.label.split('\n').map((line, index) => (
@@ -147,52 +151,52 @@ const Navbar = () => {
           </nav>
         </div>
 
-        <div className="flex flex-col items-end gap-4 p-8 md:p-12 relative z-10">
-          <div className="flex items-center gap-6 mb-2">
+        <div className="flex flex-col items-end relative z-10" style={{ gap: 'min(0.8vw, 16px)', padding: 'min(1.6vw, 48px) min(2.5vw, 48px)' }}>
+          <div className="flex items-center" style={{ gap: 'min(1.2vw, 24px)', marginBottom: 'min(0.4vw, 8px)' }}>
             <div className="overflow-hidden">
-              <button onClick={() => { switchLanguage('en'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold text-sm tracking-widest uppercase hover:text-white transition-colors">
+              <button onClick={() => { switchLanguage('en'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'min(0.9vw, 14px)' }}>
                 ENGLISH
               </button>
             </div>
             <div className="overflow-hidden">
-              <span className="nav-link-item translate-y-full text-[#84CC16] text-sm">/</span>
+              <span className="nav-link-item translate-y-full text-[#84CC16]" style={{ fontSize: 'min(0.9vw, 14px)' }}>/</span>
             </div>
             <div className="overflow-hidden">
-              <button onClick={() => { switchLanguage('ar'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold text-sm tracking-widest uppercase hover:text-white transition-colors">
+              <button onClick={() => { switchLanguage('ar'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'min(0.9vw, 14px)' }}>
                 العربية
               </button>
             </div>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center" style={{ gap: 'min(1.2vw, 24px)' }}>
             <Link href="/career" className="overflow-hidden">
-              <div className="nav-link-item translate-y-full text-white text-sm tracking-widest uppercase hover:text-gray-200">
+              <div className="nav-link-item translate-y-full text-white tracking-widest uppercase hover:text-gray-200" style={{ fontSize: 'min(0.9vw, 14px)' }}>
                 CAREERS
               </div>
             </Link>
             <Link href="/environment" className="overflow-hidden">
-              <div className="nav-link-item translate-y-full text-white text-sm tracking-widest uppercase hover:text-gray-200">
+              <div className="nav-link-item translate-y-full text-white tracking-widest uppercase hover:text-gray-200" style={{ fontSize: 'min(0.9vw, 14px)' }}>
                 ENVIRONMENT IMPACT
               </div>
             </Link>
           </div>
           <div className="overflow-hidden">
-            <p className="nav-link-item translate-y-full text-white text-xs tracking-widest uppercase">
+            <p className="nav-link-item translate-y-full text-white tracking-widest uppercase" style={{ fontSize: 'min(0.7vw, 12px)' }}>
               © POLICIES
             </p>
           </div>
-          <div className="overflow-hidden mt-6">
-            <div className="nav-link-item translate-y-full flex items-center gap-6">
+          <div className="overflow-hidden" style={{ marginTop: 'min(1.2vw, 24px)' }}>
+            <div className="nav-link-item translate-y-full flex items-center" style={{ gap: 'min(1.2vw, 24px)' }}>
               <Link href="https://www.instagram.com/webuydeadstocks?utm_source=ig_web_button_share_sheet" target="_blank" className="text-white hover:text-gray-300 transition-colors">
-                <Instagram className="w-6 h-6" strokeWidth={1.5} />
+                <Instagram strokeWidth={1.5} style={{ width: 'min(1.4vw, 24px)', height: 'min(1.4vw, 24px)' }} />
               </Link>
               <Link href="https://www.linkedin.com/company/chaudary-anwar-tr.-co-llc/posts/?feedView=all" target="_blank" className="text-white hover:text-gray-300 transition-colors">
-                <Linkedin className="w-6 h-6" strokeWidth={1.5} />
+                <Linkedin strokeWidth={1.5} style={{ width: 'min(1.4vw, 24px)', height: 'min(1.4vw, 24px)' }} />
               </Link>
               <Link href="https://www.facebook.com/webuydeadstocks/" target="_blank" className="text-white hover:text-gray-300 transition-colors">
-                <Facebook className="w-6 h-6" strokeWidth={1.5} />
+                <Facebook strokeWidth={1.5} style={{ width: 'min(1.4vw, 24px)', height: 'min(1.4vw, 24px)' }} />
               </Link>
               <Link href="https://www.tiktok.com/@webuydeadstocks.com?is_from_webapp=1&sender_device=pc" target="_blank" className="text-white hover:text-gray-300 transition-colors">
-                <Image src="/images/tiktok-outline.svg" alt="Tiktok" className="w-6 h-6 invert" width={24} height={24} />
+                <Image src="/images/tiktok-outline.svg" alt="Tiktok" className="invert" width={24} height={24} style={{ width: 'min(1.4vw, 24px)', height: 'min(1.4vw, 24px)' }} />
               </Link>
             </div>
           </div>

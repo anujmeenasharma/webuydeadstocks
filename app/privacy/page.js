@@ -2,6 +2,11 @@ import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Privacy Policy",
+  description: "Privacy Policy for We Buy Dead Stocks",
+};
+
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-white">
@@ -168,6 +173,18 @@ export default function Privacy() {
           </div>
         </section>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Privacy Policy - We Buy Dead Stocks",
+            "url": "https://www.webuydeadstocks.com/privacy"
+          })
+        }}
+      />
     </div>
   );
 }

@@ -58,7 +58,7 @@ const items = [
     },
 ];
 
-const OurInterest = () => {
+const Services = () => {
     const sectionRef = useRef(null);
 
     useGSAP(() => {
@@ -88,7 +88,7 @@ const OurInterest = () => {
             <div className="w-full mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 gap-8">
                     <div className="max-w-3xl">
-                        <h2 className="text-4xl md:text-[54px] font-black mb-4 text-[#1A1A1A] tracking-tight uppercase leading-none">OUR INTEREST</h2>
+                        <h2 className="text-4xl md:text-[54px] font-black mb-4 text-[#1A1A1A] tracking-tight uppercase leading-none">SERVICES</h2>
                         <p className="text-lg md:text-xl text-[#4A4A4A] leading-relaxed font-medium">
                             We purchase a wide range of used and unused surplus, overstock or dead inventory and scrap from multiple industries, including manufacturing, construction, IT and retail. Discover the stocks we love.
                         </p>
@@ -103,7 +103,7 @@ const OurInterest = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-[280px] md:auto-rows-[320px]">
                     {items.map((item) => (
-                        <Link href="/interest" key={item.id} className={`interest-card block ${item.className}`} style={{ willChange: 'transform, opacity' }}>
+                        <Link href={`/services/${item.title.toLowerCase().replace(/ & /g, '-and-').replace(/\\s+/g, '-')}`} key={item.id} className={`interest-card block ${item.className}`} style={{ willChange: 'transform, opacity' }}>
                             <div
                                 className="group relative overflow-hidden rounded-2xl w-full h-full cursor-pointer"
                             >
@@ -132,4 +132,4 @@ const OurInterest = () => {
     );
 };
 
-export default OurInterest;
+export default Services;

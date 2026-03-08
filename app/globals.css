@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
-*{
+* {
   font-family: var(--font-montserrat);
 }
 
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 

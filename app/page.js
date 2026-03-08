@@ -1,13 +1,19 @@
 import Landing from "@/components/pages/Home/Landing";
 import LatestBlogs from "@/components/pages/Home/LatestBlogs";
 import TextReveal from "@/components/pages/Home/TextReveal";
-import OurInterest from "@/components/pages/Home/OurInterest";
+import Services from "@/components/pages/Home/Services";
 import Pricing from "@/components/pages/Home/Pricing";
 import TrustedSection from "@/components/pages/Home/TrustedSection";
 import OurProcess from "@/components/pages/Home/OurProcess";
 import Recycling from "@/components/pages/Home/Recycling";
 import MapSection from "@/components/pages/Home/MapSection";
 import ScrollMaps from "@/components/pages/Home/ScrollMaps";
+
+export const metadata = {
+  title: {
+    absolute: "We Buy Dead Stocks"
+  },
+};
 
 const page = () => {
   return (
@@ -16,11 +22,29 @@ const page = () => {
       <TextReveal />
       <ScrollMaps />
       <OurProcess />
-      <OurInterest />
+      <Services />
       <Pricing />
       <TrustedSection />
       <Recycling />
       <LatestBlogs />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "We Buy Dead Stocks",
+            "url": "https://www.webuydeadstocks.com/",
+            "description": "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region.",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.webuydeadstocks.com/services/{search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
     </div>
   )
 }

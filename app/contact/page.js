@@ -259,6 +259,29 @@ const ContactPage = () => {
                     color: white;
                 }
             `}</style>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ContactPage",
+                        "name": "Contact Us - We Buy Dead Stocks",
+                        "url": "https://www.webuydeadstocks.com/contact",
+                        "description": "Get in touch with We Buy Dead Stocks. We're excited to hear from you.",
+                        "mainEntity": {
+                            "@type": "Organization",
+                            "name": "We Buy Dead Stocks",
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "telephone": "+97165390377",
+                                "contactType": "customer service",
+                                "email": "info@webuydeadstocks.com"
+                            }
+                        }
+                    })
+                }}
+            />
         </>
     );
 };

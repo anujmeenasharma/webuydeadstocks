@@ -53,11 +53,11 @@ export default async function BlogPostPage({ params }) {
                 )}
                 {/* Dark overlay */}
                 <div className="absolute inset-0 bg-black/60" />
-                
+
                 {/* Content overlay */}
                 <div className="relative h-full w-full px-6 sm:px-8 lg:px-12 flex flex-col justify-center">
-                    <Link 
-                        href="/" 
+                    <Link
+                        href="/"
                         className="inline-flex items-center text-white hover:text-gray-200 mb-6 transition-colors text-lg"
                     >
                         <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,11 +65,11 @@ export default async function BlogPostPage({ params }) {
                         </svg>
                         Back
                     </Link>
-                    
+
                     <div className="text-white text-lg mb-3 tracking-wide">
                         Dead Stock Blog
                     </div>
-                    
+
                     <h1 className="text-white text-4xl sm:text-4xl lg:text-4xl font-bold leading-tight max-w-5xl">
                         {article.title}
                     </h1>
@@ -99,6 +99,24 @@ export default async function BlogPostPage({ params }) {
                     />
                 </div>
             </div>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": article.title,
+                        "image": article.image ? article.image.url : "https://www.webuydeadstocks.com/images/default-blog.jpg",
+                        "datePublished": article.publishedAt,
+                        "author": {
+                            "@type": "Organization",
+                            "name": "We Buy Dead Stocks"
+                        },
+                        "description": article.seo?.description || article.excerpt
+                    })
+                }}
+            />
         </div>
     );
 }
