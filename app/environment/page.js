@@ -30,11 +30,11 @@ export default function Environment() {
             Back
           </Link>
 
-          <h1 className="text-white text-6xl sm:text-6xl lg:text-6xl font-medium leading-tight max-w-5xl">
+          <h1 className="text-white text-4xl sm:text-6xl lg:text-6xl font-medium leading-tight max-w-5xl">
             We Re-sell Responsibly
           </h1>
 
-          <div className="text-white text-lg mb-3 max-w-5xl pt-2">
+          <div className="text-white text-sm sm:text-lg md:text-xl leading-relaxed mb-3 max-w-5xl pt-2">
             We help you move dead stock responsibly by buying it and selling it to developing countries. This approach not only reduces waste but also supports affordable access to goods in emerging markets. By choosing this sustainable solution, you're making a positive impact on both your bottom line and the environment.
           </div>
         </div>

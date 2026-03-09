@@ -104,7 +104,7 @@ const Pricing = () => {
 
     return (
         <div ref={containerRef} className="h-screen w-full bg-[#ce3e3e] relative overflow-hidden flex flex-col pt-20">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-0 justify-between w-full px-[5%] absolute top-[15%] left-0 right-0 z-10">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between w-full px-[5%] absolute top-[8%] md:top-[15%] left-0 right-0 z-10">
                 <div className="w-full md:w-[45%] grid">
                     <h2 className="title-1 col-start-1 row-start-1 text-white text-3xl md:text-5xl lg:text-5xl font-bold w-full leading-tight z-10">
                         Current value of your<br />Dead Stock
@@ -132,38 +132,38 @@ const Pricing = () => {
                 </div>
             </div>
 
-            <div className="flex-1 flex items-center justify-center relative w-full h-full pb-20">
-                <div className="percentage-animation pt-[10vh] flex items-center justify-center w-full gap-[6vw] md:gap-[10vw]">
+            <div className="flex-1 flex items-center justify-center pt-[40vh] md:pt-0 lg:pt-40 relative w-full h-full pb-10 md:pb-20">
+                <div className="percentage-animation mt-[40vh] md:mt-0 pt-0 md:pt-[10vh] flex items-center justify-center w-full gap-[6vw] md:gap-[10vw]">
                     <div className="percentage-left relative flex flex-col items-center">
-                        <span className="static-fade-text opacity-0 invisible absolute -top-20 md:-top-20 text-[#171717] font-semibold text-base md:text-lg whitespace-nowrap">
+                        <span className="static-fade-text left-2 lg:left-0 opacity-0 invisible absolute -top-12 md:-top-20 text-[#171717] font-semibold text-sm md:text-lg whitespace-nowrap">
                             We buy your dead stock from
                         </span>
-                        <div className="flex items-start h-[15vw] overflow-hidden py-4">
+                        <div className="flex items-start h-[18vw] md:h-[15vw] overflow-hidden py-2 md:py-4">
                             <div ref={leftNumRef} className="flex flex-col">
                                 {[0, 1, 2, 3, 4, 5].map((num) => (
-                                    <span key={num} className="percentage-anim-text text-[15vw] leading-[1] text-[#1b1b1b] font-semibold tracking-tight h-[15vw] flex items-center">
+                                    <span key={num} className="percentage-anim-text text-[18vw] md:text-[15vw] leading-[1] text-[#1b1b1b] font-semibold tracking-tight h-[18vw] md:h-[15vw] flex items-center">
                                         {num.toString().padStart(2, '0')}
                                     </span>
                                 ))}
                             </div>
-                            <span className="percentage-symbol text-[15vw] leading-[1] text-white font-semibold tracking-tight h-[15vw] flex items-center">%</span>
+                            <span className="percentage-symbol text-[18vw] md:text-[15vw] leading-[1] text-white font-semibold tracking-tight h-[18vw] md:h-[15vw] flex items-center">%</span>
                         </div>
                     </div>
 
-                    <div className="percentage-line w-[8vw] md:w-[6vw] h-1 md:h-1.5 bg-white scale-x-0"></div>
+                    <div className="percentage-line w-[8vw] md:w-[6vw] h-1 md:h-1.5 bg-white scale-x-0 mt-[2vw] md:mt-0"></div>
 
                     <div className="percentage-right relative flex flex-col items-center">
-                        <div className="flex items-start h-[15vw] overflow-hidden py-4">
+                        <div className="flex items-start h-[18vw] md:h-[15vw] overflow-hidden py-2 md:py-4">
                             <div ref={rightNumRef} className="flex flex-col">
                                 {Array.from({ length: 21 }, (_, i) => i).map((num) => (
-                                    <span key={num} className="percentage-anim-text text-[15vw] leading-[1] text-[#1b1b1b] font-semibold tracking-tight h-[15vw] flex items-center">
+                                    <span key={num} className="percentage-anim-text text-[18vw] md:text-[15vw] leading-[1] text-[#1b1b1b] font-semibold tracking-tight h-[18vw] md:h-[15vw] flex items-center">
                                         {num.toString().padStart(2, '0')}
                                     </span>
                                 ))}
                             </div>
-                            <span className="percentage-symbol text-[15vw] leading-[1] text-white font-semibold tracking-tight h-[15vw] flex items-center">%</span>
+                            <span className="percentage-symbol text-[18vw] md:text-[15vw] leading-[1] text-white font-semibold tracking-tight h-[18vw] md:h-[15vw] flex items-center">%</span>
                         </div>
-                        <span className="static-fade-text opacity-0 invisible absolute -bottom-12 md:-bottom-16 text-[#171717] font-semibold text-base md:text-lg whitespace-nowrap">
+                        <span className="static-fade-text opacity-0 invisible absolute -bottom-10 md:-bottom-16 text-[#171717] right-2 lg:right-0 font-semibold text-sm md:text-lg whitespace-nowrap">
                             Of the original purchase cost
                         </span>
                     </div>

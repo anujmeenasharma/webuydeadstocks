@@ -45,66 +45,77 @@ const OurProcess = () => {
     const numbersContainerRef = useRef(null);
 
     useGSAP(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: sectionRef.current,
-                start: 'top top',
-                end: '+=300%',
-                scrub: 1,
-                pin: true,
-            }
-        });
+        let mm = gsap.matchMedia();
 
-        cardsRef.current.forEach((card, index) => {
-            if (index === 0) return;
+        mm.add({
+            isMobile: "(max-width: 767px)",
+            isDesktop: "(min-width: 768px)"
+        }, (context) => {
+            let { isMobile } = context.conditions;
+            let shift = isMobile ? 25 : 40;
+            let headingY = isMobile ? -100 : -150;
 
-            gsap.set(card, { y: '100%' });
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: 'top top',
+                    end: '+=300%',
+                    scrub: 1,
+                    pin: true,
+                }
+            });
 
-            tl.to(card, {
-                y: index * 40,
+            cardsRef.current.forEach((card, index) => {
+                if (index === 0) return;
+
+                gsap.set(card, { y: '100%' });
+
+                tl.to(card, {
+                    y: index * shift,
+                    duration: 1,
+                    ease: 'none'
+                }, index - 1);
+            });
+
+            tl.to(headingRef.current, {
+                y: headingY,
+                opacity: 0,
                 duration: 1,
                 ease: 'none'
-            }, index - 1);
+            }, 0);
+
+            tl.to(numbersContainerRef.current, {
+                yPercent: -25,
+                duration: 1,
+                ease: 'none'
+            }, 0);
+
+            tl.to(numbersContainerRef.current, {
+                yPercent: -50,
+                duration: 1,
+                ease: 'none'
+            }, 1);
+
+            tl.to(numbersContainerRef.current, {
+                yPercent: -75,
+                duration: 1,
+                ease: 'none'
+            }, 2);
         });
-
-        tl.to(headingRef.current, {
-            y: -150,
-            opacity: 0,
-            duration: 1,
-            ease: 'none'
-        }, 0);
-
-        tl.to(numbersContainerRef.current, {
-            yPercent: -25,
-            duration: 1,
-            ease: 'none'
-        }, 0);
-
-        tl.to(numbersContainerRef.current, {
-            yPercent: -50,
-            duration: 1,
-            ease: 'none'
-        }, 1);
-
-        tl.to(numbersContainerRef.current, {
-            yPercent: -75,
-            duration: 1,
-            ease: 'none'
-        }, 2);
     }, { scope: sectionRef });
 
     return (
         <section ref={sectionRef} className="relative w-full bg-black text-white h-screen overflow-hidden">
             <div ref={headingRef} className="absolute top-10 left-6 md:top-20 md:left-20 z-50">
-                <h2 className="text-white text-[50px] md:text-[80px] font-black leading-[1.05] uppercase tracking-tighter">
+                <h2 className="text-white text-[40px] md:text-[80px] font-black leading-[1.05] uppercase tracking-tighter">
                     Our<br />Process
                 </h2>
             </div>
 
-            <div className="absolute left-6 md:left-20 bottom-[60px] z-50 h-[70px] md:h-[100px] overflow-hidden">
+            <div className="absolute left-6 md:left-20 bottom-[40px] md:bottom-[60px] z-50 h-[60px] md:h-[100px] overflow-hidden">
                 <div ref={numbersContainerRef} className="flex flex-col">
                     {items.map((item) => (
-                        <span key={item.id} className="text-white text-[70px] md:text-[100px] font-black leading-[70px] md:leading-[100px] h-[70px] md:h-[100px] flex items-center">
+                        <span key={item.id} className="text-white text-[60px] md:text-[100px] font-black leading-[60px] md:leading-[100px] h-[60px] md:h-[100px] flex items-center">
                             {item.number}
                         </span>
                     ))}
@@ -119,8 +130,8 @@ const OurProcess = () => {
                         className="absolute inset-0 w-full h-[100vh] bg-black"
                         style={{
                             zIndex: index + 1,
-                            borderTopLeftRadius: index > 0 ? '40px' : '0',
-                            borderTopRightRadius: index > 0 ? '40px' : '0',
+                            borderTopLeftRadius: index > 0 ? 'clamp(24px, 5vw, 40px)' : '0',
+                            borderTopRightRadius: index > 0 ? 'clamp(24px, 5vw, 40px)' : '0',
                             overflow: 'hidden'
                         }}
                     >
@@ -130,18 +141,22 @@ const OurProcess = () => {
                                 alt={item.title}
                                 className="w-full h-full object-cover grayscale opacity-50"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent w-[80%] md:w-1/2"></div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 md:via-black/40 to-transparent w-[90%] md:w-1/2"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 md:via-black/20 to-transparent"></div>
                         </div>
 
                         <div
-                            className="absolute right-6 md:right-20 flex flex-col items-end text-right z-20 max-w-[90vw] md:max-w-[550px]"
-                            style={{ bottom: `${index * 40 + 60}px` }}
+                            className={`absolute right-6 md:right-20 flex flex-col items-end text-right z-20 max-w-[90vw] md:max-w-[550px]
+                                ${index === 0 ? 'bottom-[40px] md:bottom-[60px]' : ''}
+                                ${index === 1 ? 'bottom-[65px] md:bottom-[100px]' : ''}
+                                ${index === 2 ? 'bottom-[90px] md:bottom-[140px]' : ''}
+                                ${index === 3 ? 'bottom-[115px] md:bottom-[180px]' : ''}
+                            `}
                         >
-                            <h3 className="text-[#6FC128] text-[36px] md:text-[54px] font-black uppercase mb-4 leading-[1.05]">
+                            <h3 className="text-[#6FC128] text-[26px] sm:text-[30px] md:text-[54px] font-black uppercase mb-3 md:mb-4 leading-[1.05]">
                                 {item.title}
                             </h3>
-                            <p className="text-white text-base md:text-xl font-medium w-full">
+                            <p className="text-white text-[15px] md:text-xl font-medium w-full">
                                 {item.desc}
                             </p>
                         </div>

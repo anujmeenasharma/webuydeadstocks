@@ -18,21 +18,21 @@ export default function AboutUs() {
         </div>
 
         {/* Content */}
-        <div className="relative h-full w-full mx-auto px-20 sm:px-20 lg:px-20">
+        <div className="relative h-full w-full mx-auto px-6 sm:px-20 lg:px-20">
           <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left Column */}
             <div className="text-white">
-              <h2 className="text-3xl max-w-lg mb-4 leading-tight">
+              <h2 className="text-2xl sm:text-3xl max-w-lg mb-4 leading-tight">
                 21+ Years Of Turning Non-Moving Stock Into Instant Cash
               </h2>
             </div>
 
             {/* Right Column */}
             <div className="text-white">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
                 About Us
               </h1>
-              <p className="text-lg md:text-xl leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed">
                 Established in 2003, We Buy Dead Stocks is a leading dead stock buyer in
                 the UAE and GCC region. Our mission is simple: to help businesses recover
                 their losses by turning surplus and non-moving inventory into immediate
@@ -48,11 +48,11 @@ export default function AboutUs() {
 
       {/* Trust Us Section */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="w-full mx-auto px-20 sm:px-20 lg:px-20">
+        <div className="w-full mx-auto px-6 sm:px-20 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Trust Us, We're Experts At Dead Stock Liquidation
               </h2>
 
@@ -92,7 +92,7 @@ export default function AboutUs() {
             </div>
 
             {/* Right Column - Image */}
-            <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative h-[300px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl mt-8 lg:mt-0">
               <img
                 src="/images/desc.webp"
                 alt="Warehouse Manager"
@@ -116,9 +116,9 @@ export default function AboutUs() {
         </div>
 
         {/* Content */}
-        <div className="relative w-full mx-auto px-20 sm:px-6 lg:px-8">
+        <div className="relative w-full mx-auto px-6 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Our commitment to sustainability
             </h2>
             <p className="text-lg md:text-xl text-white leading-relaxed">
@@ -132,12 +132,13 @@ export default function AboutUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-black/90">
+      <section className="relative py-24 md:py-32 overflow-hidden bg-black/90 px-6 sm:px-0">
         {/* Content */}
         <div className="relative text-center mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl text-white mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-white mb-8 leading-tight">
             Too Much Stock And Not Enough Space?
-            <br />
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
             We Have You Covered
           </h2>
           <Link
@@ -150,8 +151,8 @@ export default function AboutUs() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-20 md:py-28 bg-white">
-        <div className="w-full mx-auto px-20 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 px-6 sm:px-20 md:py-28 bg-white">
+        <div className="w-full mx-auto px-0 sm:px-6 lg:px-8">
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-16">
             {/* Feature 1 */}

@@ -47,13 +47,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full flex items-center justify-between fixed top-0 z-40" style={{ padding: 'min(1.1vw, 16px) min(1.6vw, 23px)', paddingLeft: 'min(2vw, 40px)' }}>
-        <Link href="/" className="flex items-center" style={{ gap: 'min(0.8vw, 12px)' }}>
-          <Image src="/logo.png" alt="Logo" width={150} height={150} style={{ width: 'min(10.4vw, 150px)', height: 'auto' }} />
+      <nav className="w-full flex items-center justify-between fixed top-0 z-40" style={{ padding: 'clamp(12px, 1.1vw, 16px) clamp(16px, 1.6vw, 23px)', paddingLeft: 'clamp(20px, 2vw, 40px)' }}>
+        <Link href="/" className="flex items-center" style={{ gap: 'clamp(8px, 0.8vw, 12px)' }}>
+          <Image src="/logo.png" alt="Logo" width={150} height={150} style={{ width: 'clamp(90px, 10.4vw, 150px)', height: 'auto' }} />
         </Link>
 
-        <div className="flex items-center" style={{ gap: 'min(1.8vw, 26px)' }}>
-          <div className="hidden lg:flex items-center" style={{ gap: 'min(2vw, 32px)' }}>
+        <div className="flex items-center" style={{ gap: 'clamp(16px, 1.8vw, 26px)' }}>
+          <div className="hidden lg:flex items-center" style={{ gap: 'clamp(20px, 2vw, 32px)' }}>
             <div
               className="relative"
               onMouseEnter={() => setIsLangOpen(true)}
@@ -92,12 +92,12 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <Link href="/contact" className="flex items-center justify-center bg-white text-black font-bold tracking-wider uppercase hover:bg-gray-100 transition-colors" style={{ fontSize: 'min(0.97vw, 14px)', padding: 'min(0.7vw, 10px) min(1.6vw, 24px)' }}>
+          <Link href="/contact" className="flex items-center justify-center bg-white text-black font-bold tracking-wider uppercase hover:bg-gray-100 transition-colors max-md:hidden" style={{ fontSize: 'clamp(12px, 0.97vw, 14px)', padding: 'clamp(8px, 0.7vw, 10px) clamp(16px, 1.6vw, 24px)' }}>
             CONTACT US
           </Link>
-          <button onClick={toggleSidebar} className="flex flex-col cursor-pointer focus:outline-none" style={{ gap: 'min(0.42vw, 6px)', marginLeft: 'min(1vw, 16px)' }}>
-            <div className="bg-white" style={{ width: 'min(2.2vw, 32px)', height: 'min(0.14vw, 2px)' }}></div>
-            <div className="bg-white" style={{ width: 'min(2.2vw, 32px)', height: 'min(0.14vw, 2px)' }}></div>
+          <button onClick={toggleSidebar} className="flex flex-col cursor-pointer focus:outline-none" style={{ gap: 'clamp(4px, 0.42vw, 6px)', marginLeft: 'clamp(16px, 1vw, 16px)' }}>
+            <div className="bg-white" style={{ width: 'clamp(24px, 2.2vw, 32px)', height: '2px' }}></div>
+            <div className="bg-white" style={{ width: 'clamp(24px, 2.2vw, 32px)', height: '2px' }}></div>
           </button>
         </div>
       </nav>
@@ -114,18 +114,18 @@ const Navbar = () => {
         ref={container}
         className={`fixed top-0 right-0 h-screen w-full bg-[#118B50] z-50 transform transition-transform duration-500 ease-in-out flex flex-col ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
           }`}
-        style={{ maxWidth: 'min(33.3vw, 480px)' }}
+        style={{ maxWidth: 'clamp(300px, 33.3vw, 480px)' }}
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 flex flex-col justify-end">
-          <div className="opacity-[0.05] text-white font-black leading-[0.85] tracking-tighter w-full whitespace-nowrap" style={{ fontSize: 'clamp(3rem, 4.2vw, 6rem)', paddingBottom: 'min(1.6vw, 32px)' }}>
+          <div className="opacity-[0.05] text-white font-black leading-[0.85] tracking-tighter w-full whitespace-nowrap" style={{ fontSize: 'clamp(3rem, 4.2vw, 6rem)', paddingBottom: 'clamp(20px, 1.6vw, 32px)' }}>
             <div style={{ paddingLeft: 'min(0.8vw, 16px)' }}>WE BUY DEAD</div>
             <div style={{ paddingLeft: 'min(0.8vw, 16px)' }}>STOCKS</div>
           </div>
         </div>
 
-        <div className="flex justify-end relative z-10" style={{ padding: 'min(1.6vw, 32px) min(2vw, 32px)' }}>
+        <div className="flex justify-end relative z-10" style={{ padding: 'clamp(20px, 1.6vw, 32px) clamp(20px, 2vw, 32px)' }}>
           <button onClick={toggleSidebar} className="text-white hover:text-gray-200 transition-colors cursor-pointer">
-            <X strokeWidth={1} style={{ width: 'min(2.5vw, 40px)', height: 'min(2.5vw, 40px)' }} />
+            <X strokeWidth={1} style={{ width: 'clamp(28px, 2.5vw, 40px)', height: 'clamp(28px, 2.5vw, 40px)' }} />
           </button>
         </div>
 
@@ -136,7 +136,7 @@ const Navbar = () => {
                 key={link.label}
                 href={link.href}
                 className="group flex flex-col cursor-pointer text-white font-normal tracking-wide hover:text-gray-200 transition-colors uppercase text-left leading-tight"
-                style={{ fontSize: 'min(2.1vw, 40px)' }}
+                style={{ fontSize: 'clamp(28px, 2.1vw, 40px)' }}
                 onClick={toggleSidebar}
               >
                 {link.label.split('\n').map((line, index) => (
@@ -151,25 +151,25 @@ const Navbar = () => {
           </nav>
         </div>
 
-        <div className="flex flex-col items-end relative z-10" style={{ gap: 'min(0.8vw, 16px)', padding: 'min(1.6vw, 48px) min(2.5vw, 48px)' }}>
-          <div className="flex items-center" style={{ gap: 'min(1.2vw, 24px)', marginBottom: 'min(0.4vw, 8px)' }}>
+        <div className="flex flex-col items-end relative z-10" style={{ gap: 'clamp(12px, 0.8vw, 16px)', padding: 'clamp(24px, 1.6vw, 48px) clamp(24px, 2.5vw, 48px)' }}>
+          <div className="flex items-center" style={{ gap: 'clamp(16px, 1.2vw, 24px)', marginBottom: 'clamp(4px, 0.4vw, 8px)' }}>
             <div className="overflow-hidden">
-              <button onClick={() => { switchLanguage('en'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'min(0.9vw, 14px)' }}>
+              <button onClick={() => { switchLanguage('en'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>
                 ENGLISH
               </button>
             </div>
             <div className="overflow-hidden">
-              <span className="nav-link-item translate-y-full text-[#84CC16]" style={{ fontSize: 'min(0.9vw, 14px)' }}>/</span>
+              <span className="nav-link-item translate-y-full text-[#84CC16]" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>/</span>
             </div>
             <div className="overflow-hidden">
-              <button onClick={() => { switchLanguage('ar'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'min(0.9vw, 14px)' }}>
+              <button onClick={() => { switchLanguage('ar'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>
                 العربية
               </button>
             </div>
           </div>
-          <div className="flex items-center" style={{ gap: 'min(1.2vw, 24px)' }}>
+          <div className="flex items-center" style={{ gap: 'clamp(16px, 1.2vw, 24px)' }}>
             <Link href="/career" className="overflow-hidden">
-              <div className="nav-link-item translate-y-full text-white tracking-widest uppercase hover:text-gray-200" style={{ fontSize: 'min(0.9vw, 14px)' }}>
+              <div className="nav-link-item translate-y-full text-white tracking-widest uppercase hover:text-gray-200" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>
                 CAREERS
               </div>
             </Link>
