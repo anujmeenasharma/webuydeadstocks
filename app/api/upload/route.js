@@ -20,7 +20,7 @@ export async function POST(request) {
         const pureName = file.name.replace(/[^a-zA-Z0-9.\-_]/g, '');
         const filename = `${Date.now()}-${pureName}`;
         
-        const uploadDir = path.join(process.cwd(), "public/uploads");
+        const uploadDir = path.join(process.cwd(), "uploads");
         await mkdir(uploadDir, { recursive: true });
         
         const filepath = path.join(uploadDir, filename);
