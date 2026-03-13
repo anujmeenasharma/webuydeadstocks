@@ -96,7 +96,7 @@ export default async function BlogPostPage({ params }) {
 
             {/* White Content Section */}
             <div className="bg-white">
-                <div className="w-full lg:w-[80%] mx-auto px-6 sm:px-8 lg:px-12 py-16">
+                <div className="w-full lg:w-[80%] px-6 sm:px-8 lg:px-12 py-16">
                     {/* Published Date */}
                     <div className="text-gray-600 text-base mb-12">
                         Published on : {formattedDate}
@@ -104,10 +104,10 @@ export default async function BlogPostPage({ params }) {
 
                     {/* Article Content */}
                     <div
-                        className="prose prose-lg max-w-full w-full break-words
+                        className="prose prose-lg max-w-none
                         prose-headings:text-gray-900 prose-headings:font-bold prose-headings:text-3xl prose-headings:mb-6 prose-headings:mt-12
-                        prose-p:text-gray-700 prose-p:text-lg prose-p:leading-relaxed prose-p:mb-6 prose-p:whitespace-pre-wrap
-                        prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline break-all
+                        prose-p:text-gray-700 prose-p:text-lg prose-p:leading-relaxed prose-p:mb-6
+                        prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline break-words
                         prose-strong:text-gray-900 prose-strong:font-semibold
                         prose-ul:text-gray-700 prose-ul:text-lg
                         prose-ol:text-gray-700 prose-ol:text-lg
