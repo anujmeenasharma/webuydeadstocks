@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { writeFile } from "fs/promises";
+import { writeFile, mkdir } from "fs/promises";
 import path from "path";
 
 // Native Next.js 13+ App router file upload without needing external multer middleware.
@@ -21,6 +21,8 @@ export async function POST(request) {
         const filename = `${Date.now()}-${pureName}`;
         
         const uploadDir = path.join(process.cwd(), "public/uploads");
+        await mkdir(uploadDir, { recursive: true });
+        
         const filepath = path.join(uploadDir, filename);
         
         await writeFile(filepath, buffer);
