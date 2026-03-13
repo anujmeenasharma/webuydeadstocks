@@ -56,7 +56,7 @@ export default async function BlogPostPage({ params }) {
     });
 
     return (
-        <div className="min-h-screen w-full overflow-hidden flex flex-col">
+        <div className="min-h-screen flex flex-col overflow-x-hidden">
             {/* Hero Section with Background Image */}
             <div className="relative h-[50vh] w-full">
                 {article.image && (
@@ -104,7 +104,7 @@ export default async function BlogPostPage({ params }) {
 
                     {/* Article Content */}
                     <div
-                        className="prose prose-lg max-w-full w-[100%] overflow-hidden break-normal
+                        className="prose prose-lg max-w-none
                         prose-headings:text-gray-900 prose-headings:font-bold prose-headings:text-3xl prose-headings:mb-6 prose-headings:mt-12
                         prose-p:text-gray-700 prose-p:text-lg prose-p:leading-relaxed prose-p:mb-6
                         prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
