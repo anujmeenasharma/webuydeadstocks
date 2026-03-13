@@ -1,10 +1,27 @@
-import { fetchArticle } from '@/lib/shopify';
 import Image from 'next/image';
 import Link from 'next/link';
+import connectToDatabase from '@/lib/mongodb';
+import Blog from '@/models/Blog';
+
+async function fetchLocalArticle(slug) {
+    await connectToDatabase();
+    const blog = await Blog.findOne({ handle: slug }).lean();
+    if (!blog) return null;
+    return {
+        id: blog._id.toString(),
+        title: blog.title,
+        handle: blog.handle,
+        excerpt: blog.excerpt,
+        publishedAt: blog.publishedAt,
+        image: blog.image,
+        contentHtml: blog.contentHtml,
+        seo: blog.seo
+    };
+}
 
 export async function generateMetadata({ params }) {
     const { slug } = await params;
-    const article = await fetchArticle(slug);
+    const article = await fetchLocalArticle(slug);
     if (!article) return { title: 'Article Not Found' };
 
     return {
@@ -15,7 +32,7 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPostPage({ params }) {
     const { slug } = await params;
-    const article = await fetchArticle(slug);
+    const article = await fetchLocalArticle(slug);
 
     if (!article) {
         return (

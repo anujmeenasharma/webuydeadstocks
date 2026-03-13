@@ -3,8 +3,14 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Search } from "lucide-react";
-import { fetchBlogData } from "@/lib/shopify";
 import { useLenis } from "lenis/react";
+
+// Local fetch replacement for fetchBlogData
+const fetchLocalBlogs = async (cursor = null) => {
+    const res = await fetch(`/api/blogs${cursor ? `?cursor=${cursor}` : ""}`);
+    if (!res.ok) throw new Error("Failed to fetch blogs");
+    return res.json();
+};
 
 
 
@@ -29,7 +35,7 @@ const BlogPage = () => {
         const loadBlogs = async () => {
             setLoading(true);
             try {
-                const { edges, pageInfo } = await fetchBlogData();
+                const { edges, pageInfo } = await fetchLocalBlogs();
                 setBlogs(edges);
                 setPageInfo(pageInfo);
             } catch (error) {
@@ -46,7 +52,7 @@ const BlogPage = () => {
         if (!pageInfo.hasNextPage) return;
 
         try {
-            const { edges, pageInfo: newPageInfo } = await fetchBlogData(pageInfo.endCursor);
+            const { edges, pageInfo: newPageInfo } = await fetchLocalBlogs(pageInfo.endCursor);
             setBlogs((prev) => {
                 const combined = [...prev, ...edges];
                 const uniqueBlogs = Array.from(new Map(combined.map(item => [item.node.id, item])).values());
