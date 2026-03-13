@@ -2,13 +2,25 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { PenSquare, Trash2, Plus, Search, Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { PenSquare, Trash2, Plus, Search, Loader2, LogOut } from "lucide-react";
 
 export default function AdminBlogsPage() {
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
     const [searchQuery, setSearchQuery] = useState("");
     const [error, setError] = useState(null);
+    const router = useRouter();
+
+    const handleLogout = async () => {
+        try {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            router.push('/admin/login');
+            router.refresh();
+        } catch (err) {
+            console.error('Logout error:', err);
+        }
+    };
 
     useEffect(() => {
         fetchBlogs();
@@ -53,8 +65,15 @@ export default function AdminBlogsPage() {
     const filteredBlogs = blogs.filter(b => b.title.toLowerCase().includes(searchQuery.toLowerCase()));
 
     return (
-        <div className="min-h-screen bg-[#f4f6f8] text-[#202223] font-sans p-6 lg:p-12">
-            <div className="max-w-6xl mx-auto space-y-8">
+        <div className="min-h-screen bg-[#f4f6f8] text-[#202223] font-sans p-6 lg:p-12 relative">
+            <button
+                onClick={handleLogout}
+                className="fixed top-6 right-6 lg:top-8 lg:right-12 z-50 flex items-center justify-center gap-2 bg-white text-gray-700 hover:text-red-600 hover:bg-red-50 border border-gray-200 px-4 py-2 rounded-lg font-medium shadow-sm transition-all"
+            >
+                <LogOut className="w-4 h-4" />
+                <span className="hidden sm:inline">Logout</span>
+            </button>
+            <div className="max-w-6xl mx-auto space-y-8 mt-12 lg:mt-0">
                 
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
