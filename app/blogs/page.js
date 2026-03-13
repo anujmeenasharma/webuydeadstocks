@@ -71,7 +71,7 @@ const BlogPage = () => {
     });
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white overflow-x-hidden">
 
             <section className="relative h-[50vh] w-full overflow-hidden bg-gray-900 text-white">
                 <div className="absolute inset-0 z-0">
