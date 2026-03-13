@@ -147,6 +147,7 @@ const BlogPage = () => {
                                                 alt={post.image?.altText || post.title}
                                                 fill
                                                 className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                                unoptimized={imageUrl?.startsWith('/uploads/')}
                                             />
                                         </div>
                                         <div className="flex flex-1 flex-col pt-6">

@@ -66,6 +66,7 @@ export default async function BlogPostPage({ params }) {
                         fill
                         className="object-cover"
                         priority
+                        unoptimized={article.image.url?.startsWith('/uploads/')}
                     />
                 )}
                 {/* Dark overlay */}
