@@ -96,7 +96,7 @@ export default async function BlogPostPage({ params }) {
 
             {/* White Content Section */}
             <div className="bg-white">
-                <div className="w-full lg:w-[95%] px-6 sm:px-8 lg:px-12 py-16">
+                <div className="w-full lg:w-[100%] px-6 sm:px-8 lg:px-12 py-16">
                     {/* Published Date */}
                     <div className="text-gray-600 text-base mb-12">
                         Published on : {formattedDate}
