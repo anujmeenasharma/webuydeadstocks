@@ -63,9 +63,9 @@ const LatestBlogs = () => {
                                             Dead Stock Blog
                                         </span>
 
-                                        <h3 className="text-[22px] font-semibold text-[#1a1a1a] leading-snug mb-8 flex-grow group-hover:text-blue-600 transition-colors">
+                                        <h4 className="text-[22px] font-semibold text-[#1a1a1a] leading-snug mb-8 flex-grow group-hover:text-blue-600 transition-colors">
                                             {post.title}
-                                        </h3>
+                                        </h4>
 
                                         <div className="flex justify-between items-center mt-auto w-full">
                                             <span className="text-[#8CC63F] font-bold text-[15px] group-hover:text-[#7ab036] transition-colors">

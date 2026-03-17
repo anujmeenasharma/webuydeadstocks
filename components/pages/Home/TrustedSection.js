@@ -8,7 +8,7 @@ const TrustedSection = () => {
                     Trusted By <span className="font-bold text-[#6CC24A]">Startups, Manufacturers,</span>
                     <br className="hidden md:block" />
                     <span className="font-bold text-[#6CC24A]">Traders</span> &{" "}
-                    <span className="font-bold text-[#6CC24A]">Distributers</span> for 21+ Years
+                    <span className="font-bold text-[#6CC24A]">Distributors</span> for 21+ Years
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3">
                     <div className="flex flex-col md:pr-12 lg:pr-16 md:border-r border-gray-200 pb-10 md:pb-0">

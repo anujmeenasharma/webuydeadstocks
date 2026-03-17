@@ -16,10 +16,10 @@ const Landing = () => {
       <div className="absolute inset-0 bg-black/80"></div>
       <div className="relative z-10 w-full mx-auto px-6 md:px-[3.3vw] 2xl:px-16 flex flex-col md:flex-row justify-between items-center gap-10 md:gap-[2.1vw] 2xl:gap-10">
         <div className="flex flex-col items-start w-full md:w-auto">
-          <h2 className="text-white text-2xl md:text-[2vw] 2xl:text-[38px] font-normal leading-snug mb-2 md:mb-[0.4vw] 2xl:mb-2 md:whitespace-nowrap">
+          <h1 className="text-white text-2xl md:text-[2vw] 2xl:text-[38px] font-normal leading-snug mb-2 md:mb-[0.4vw] 2xl:mb-2 md:whitespace-nowrap">
             We Help Businesses, Turn Non-Moving<br />
             Inventory Into
-          </h2>
+          </h1>
           <h1 className="text-[#7ED957] text-6xl md:text-[5.7vw] 2xl:text-[110px] font-bold tracking-tighter leading-none mb-10 md:mb-[2.1vw] 2xl:mb-10 md:whitespace-nowrap">
             Cash & Space.
           </h1>

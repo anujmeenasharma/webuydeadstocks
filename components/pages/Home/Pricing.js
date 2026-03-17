@@ -106,12 +106,12 @@ const Pricing = () => {
         <div ref={containerRef} className="h-screen w-full bg-[#ce3e3e] relative overflow-hidden flex flex-col pt-20">
             <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between w-full px-[5%] absolute top-[8%] md:top-[15%] left-0 right-0 z-10">
                 <div className="w-full md:w-[45%] grid">
-                    <h2 className="title-1 col-start-1 row-start-1 text-white text-3xl md:text-5xl lg:text-5xl font-bold w-full leading-tight z-10">
+                    <h3 className="title-1 col-start-1 row-start-1 text-white text-3xl md:text-5xl lg:text-5xl font-bold w-full leading-tight z-10">
                         Current value of your<br />Dead Stock
-                    </h2>
-                    <h2 className="title-2 col-start-1 row-start-1 text-white text-3xl md:text-5xl lg:text-5xl font-bold w-full leading-tight opacity-0 invisible z-20">
+                    </h3>
+                    <h3 className="title-2 col-start-1 row-start-1 text-white text-3xl md:text-5xl lg:text-5xl font-bold w-full leading-tight opacity-0 invisible z-20">
                         We Offer Fair & Upfront<br />Pricing
-                    </h2>
+                    </h3>
                 </div>
                 <div className="w-full md:w-[45%] grid overflow-hidden items-start pb-4">
                     <p className="subtitle-1 col-start-1 row-start-1 text-white text-xs md:text-sm lg:text-base leading-relaxed font-light z-10">

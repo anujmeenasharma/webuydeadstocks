@@ -11,10 +11,10 @@ import ScrollMaps from "@/components/pages/Home/ScrollMaps";
 
 export const metadata = {
   title: {
-    absolute: "We Buy Dead Stocks",
+    absolute: "We Buy Dead Stocks | Dead stock buyer in the UAE and GCC region",
   },
   description:
-    "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region. We purchase surplus inventory, expired goods, and excess stock at the best prices.",
+    "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region. We purchase surplus inventory, expired goods, and excess stock.",
   alternates: {
     canonical: "https://www.webuydeadstocks.com/",
   },

@@ -45,7 +45,7 @@ const MapSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center">
                     <Image src="/images/Globe.svg" alt="" width={100} height={100} className="mx-auto pb-10" />
-                    <h2 className='text-white text-2xl md:text-3xl lg:text-4xl text-center px-6'>OR wherever You Are In The world,<br />We Can Buy Dead Stock From You</h2>
+                    <h3 className='text-white text-2xl md:text-3xl lg:text-4xl text-center px-6'>OR wherever You Are In The world,<br />We Can Buy Dead Stock From You</h3>
                 </div>
             </div>
         </div>

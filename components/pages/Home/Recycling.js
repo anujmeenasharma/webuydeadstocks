@@ -172,12 +172,12 @@ const Recycling = () => {
             <div className="absolute inset-0 w-full h-full z-10 flex flex-col justify-between pointer-events-none">
 
                 <div ref={textContainerRef} className="relative w-full h-full pt-20 px-6 md:pt-24 md:pl-16 text-white pointer-events-auto">
-                    <h2 ref={text1Ref} className="absolute text-[13vw] sm:text-[10vw] md:text-[80px] font-bold leading-[1.1] tracking-tight text-white mb-4" style={{ opacity: 0 }}>
+                    <h3 ref={text1Ref} className="absolute text-[13vw] sm:text-[10vw] md:text-[80px] font-bold leading-[1.1] tracking-tight text-white mb-4" style={{ opacity: 0 }}>
                         Forget<br />Recycling
-                    </h2>
-                    <h2 ref={text2Ref} className="absolute text-[11vw] sm:text-[9vw] md:text-[80px] font-bold leading-[1.1] tracking-tight text-white mb-4" style={{ opacity: 0 }}>
+                    </h3>
+                    <h3 ref={text2Ref} className="absolute text-[11vw] sm:text-[9vw] md:text-[80px] font-bold leading-[1.1] tracking-tight text-white mb-4" style={{ opacity: 0 }}>
                         We Re-sell<br />Responsibly<br />Worldwide
-                    </h2>
+                    </h3>
                 </div>
 
                 <div ref={bottomPanelRef} className="absolute md:relative bottom-0 w-full flex flex-col md:flex-row pointer-events-auto">
