@@ -97,10 +97,6 @@ const Navbar = () => {
               BOOK A CALL
             </Link>
           </div>
-
-          <Link href="/contact" className="flex items-center justify-center bg-transparent text-green-500 border border-green-500 font-bold tracking-wider uppercase hover:bg-green-500 duration-500 hover:text-white transition-colors max-md:hidden" style={{ fontSize: 'clamp(12px, 0.97vw, 14px)', padding: 'clamp(8px, 0.7vw, 10px) clamp(16px, 1.6vw, 24px)' }}>
-            CONTACT US
-          </Link>
           <button onClick={toggleSidebar} className="flex flex-col cursor-pointer focus:outline-none" style={{ gap: 'clamp(4px, 0.42vw, 6px)', marginLeft: 'clamp(16px, 1vw, 16px)' }}>
             <div className="bg-white" style={{ width: 'clamp(24px, 2.2vw, 32px)', height: '2px' }}></div>
             <div className="bg-white" style={{ width: 'clamp(24px, 2.2vw, 32px)', height: '2px' }}></div>
