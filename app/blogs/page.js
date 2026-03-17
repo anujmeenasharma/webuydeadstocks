@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Search } from "lucide-react";
 import { useLenis } from "lenis/react";
+import Script from "next/script";
 
 // Local fetch replacement for fetchBlogData
 const fetchLocalBlogs = async (cursor = null) => {
@@ -157,9 +158,9 @@ const BlogPage = () => {
                                             <h3 className="mb-3 text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                                                 {post.title}
                                             </h3>
-                                            <p className="line-clamp-3 text-sm leading-relaxed text-gray-600">
+                                            <div className="line-clamp-3 text-sm leading-relaxed text-gray-600">
                                                 {post.excerpt || "Click to read more..."}
-                                            </p>
+                                            </div>
                                             <p className="mt-4 text-xs text-gray-400">
                                                 Published on: {new Date(post.publishedAt).toLocaleDateString()}
                                             </p>
@@ -188,7 +189,8 @@ const BlogPage = () => {
                 )}
             </section>
 
-            <script
+            <Script
+                id="blog-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
