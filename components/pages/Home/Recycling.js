@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import Image from "next/image";
+import Link from "next/link";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -188,9 +189,9 @@ const Recycling = () => {
                             This approach not only reduces waste but also supports affordable access to goods in emerging markets.
                             By choosing this sustainable solution, you're making a positive impact on both your bottom line and the environment.
                         </p>
-                        <button className="text-white border border-white px-5 py-2 md:px-6 md:py-2 text-[10px] sm:text-xs tracking-widest hover:bg-white hover:text-black transition-colors w-fit font-medium">
+                        <Link href="/services" className="text-white border border-white px-5 py-2 md:px-6 md:py-2 text-[10px] sm:text-xs tracking-widest hover:bg-white hover:text-black transition-colors w-fit font-medium">
                             LEARN MORE
-                        </button>
+                        </Link>
                     </div>
 
                     <div className="w-full md:w-1/2 flex flex-col sm:flex-row">
