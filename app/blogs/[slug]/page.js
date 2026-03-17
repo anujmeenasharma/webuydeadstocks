@@ -22,7 +22,7 @@ async function fetchLocalArticle(slug) {
 export async function generateMetadata({ params }) {
     const { slug } = await params;
     const article = await fetchLocalArticle(slug);
-    if (!article) return { title: 'Article Not Found' };
+    if (!article) return { title: '503 – Service Unavailable' };
 
     return {
         title: article.seo?.title || article.title,
@@ -36,13 +36,18 @@ export default async function BlogPostPage({ params }) {
 
     if (!article) {
         return (
-            <div className="w-full min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-2xl font-bold mb-4">Article not found</h1>
-                    <Link href="/blogs" className="text-blue-600 hover:underline">
-                        Back to blogs
-                    </Link>
-                </div>
+            <div className="w-full min-h-screen flex flex-col items-center justify-center bg-white px-4">
+                <p className="text-8xl font-extrabold text-gray-900 mb-4">503</p>
+                <h1 className="text-2xl font-bold text-gray-800 mb-2">Service Unavailable</h1>
+                <p className="text-gray-500 mb-8 text-center max-w-md">
+                    The page you&apos;re looking for could not be found or is temporarily unavailable.
+                </p>
+                <Link
+                    href="/blogs"
+                    className="inline-block bg-black text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
+                >
+                    Back to Blogs
+                </Link>
             </div>
         );
     }
