@@ -11,7 +11,20 @@ import ScrollMaps from "@/components/pages/Home/ScrollMaps";
 
 export const metadata = {
   title: {
-    absolute: "We Buy Dead Stocks"
+    absolute: "We Buy Dead Stocks",
+  },
+  description:
+    "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region. We purchase surplus inventory, expired goods, and excess stock at the best prices.",
+  alternates: {
+    canonical: "https://www.webuydeadstocks.com/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 

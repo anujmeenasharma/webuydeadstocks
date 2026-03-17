@@ -73,34 +73,34 @@ const TextReveal = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-[10vw] gap-x-[5vw] md:gap-[1.25vw] 2xl:gap-6 w-full">
                     <div className="flex flex-col">
-                        <h3 className="text-[#7ED957] text-[9.2vw] md:text-[2.4vw] 2xl:text-[46px] font-bold mb-[2vw] md:mb-[0.4vw] 2xl:mb-2">
+                        <span className="text-[#7ED957] text-[9.2vw] md:text-[2.4vw] 2xl:text-[46px] font-bold mb-[2vw] md:mb-[0.4vw] 2xl:mb-2">
                             21+
-                        </h3>
+                        </span>
                         <p className="text-gray-600 text-[4.6vw] md:text-[1vw] 2xl:text-[20px] font-normal">
                             Year of Experience
                         </p>
                     </div>
                     <div className="flex flex-col">
-                        <h3 className="text-[#7ED957] text-[9.2vw] md:text-[2.4vw] 2xl:text-[46px] font-bold mb-[2vw] md:mb-[0.4vw] 2xl:mb-2">
+                        <span className="text-[#7ED957] text-[9.2vw] md:text-[2.4vw] 2xl:text-[46px] font-bold mb-[2vw] md:mb-[0.4vw] 2xl:mb-2">
                             3359+
-                        </h3>
+                        </span>
                         <p className="text-gray-600 text-[4.6vw] md:text-[1vw] 2xl:text-[20px] font-normal">
                             Dead Stocks Cleared
                         </p>
                     </div>
                     <div className="flex flex-col">
-                        <h3 className="text-[#7ED957] text-[9.2vw] md:text-[2.4vw] 2xl:text-[46px] font-bold mb-[2vw] md:mb-[0.4vw] 2xl:mb-2">
+                        <span className="text-[#7ED957] text-[9.2vw] md:text-[2.4vw] 2xl:text-[46px] font-bold mb-[2vw] md:mb-[0.4vw] 2xl:mb-2">
                             15+
-                        </h3>
+                        </span>
                         <p className="text-gray-600 text-[4.6vw] md:text-[1vw] 2xl:text-[20px] font-normal">
                             Countries Served in The
                             <br className="hidden md:block" /> GCC & Worldwide
                         </p>
                     </div>
                     <div className="flex flex-col">
-                        <h3 className="text-[#7ED957] text-[9.2vw] md:text-[2.4vw] 2xl:text-[46px] font-bold mb-[2vw] md:mb-[0.4vw] 2xl:mb-2">
+                        <span className="text-[#7ED957] text-[9.2vw] md:text-[2.4vw] 2xl:text-[46px] font-bold mb-[2vw] md:mb-[0.4vw] 2xl:mb-2">
                             04
-                        </h3>
+                        </span>
                         <p className="text-gray-600 text-[4.6vw] md:text-[1vw] 2xl:text-[20px] font-normal">
                             Offices Worldwide
                         </p>

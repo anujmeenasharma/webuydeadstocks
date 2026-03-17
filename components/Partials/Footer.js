@@ -18,7 +18,7 @@ const Footer = () => {
               <img src="/logo.png" alt="Logo" className="w-45 object-contain" />
             </div>
 
-            <p className="text-gray-300 text-sm leading-relaxed mb-8 max-w-sm">
+            <p className="text-gray-300 text-base leading-relaxed mb-8 max-w-sm">
               Purchasers of Dead Stock based out of Dubai,UAE,with office in Germany and Pakistan.
             </p>
 
@@ -39,15 +39,15 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1 lg:col-span-2">
-            <h3 className="text-xl font-bold mb-6">Services</h3>
-            <ul className="flex flex-col gap-4">
+            <Link href="/services" className="text-xl font-bold">Services</Link>
+            <ul className="flex flex-col gap-4 pt-6">
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/services" className="text-gray-300 hover:text-white transition-colors text-base">
                   What we buy
                 </Link>
               </li>
               <li>
-                <Link href="/blogs" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/blogs" className="text-gray-300 hover:text-white transition-colors text-base">
                   Blog
                 </Link>
               </li>
@@ -55,23 +55,23 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1 lg:col-span-4">
-            <h3 className="text-xl font-bold mb-6">Contact Us</h3>
-            <ul className="flex flex-col gap-4">
+            <Link href="/contact" className="text-xl font-bold">Contact Us</Link>
+            <ul className="flex flex-col gap-4 pt-6">
               <li className="flex items-start gap-4">
                 <Mail className="w-5 h-5 text-gray-300 mt-0.5" strokeWidth={1.5} />
-                <a href="mailto:info@webuydeadstocks.com" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="mailto:info@webuydeadstocks.com" className="text-gray-300 hover:text-white transition-colors text-base">
                   info@webuydeadstocks.com
                 </a>
               </li>
               <li className="flex items-start gap-4">
                 <Phone className="w-5 h-5 text-gray-300 mt-0.5" strokeWidth={1.5} />
-                <a href="tel:+97165390377" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="tel:+97165390377" className="text-gray-300 hover:text-white transition-colors text-base">
                   (+971) 6 539 0377
                 </a>
               </li>
               <li className="flex items-start gap-4">
                 <MapPin className="w-5 h-5 text-gray-300 mt-0.5" strokeWidth={1.5} />
-                <span className="text-gray-300 text-sm">
+                <span className="text-gray-300 text-base">
                   P. O. Box 31146, Sharjah, UAE
                 </span>
               </li>
@@ -79,25 +79,25 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1 lg:col-span-2">
-            <h3 className="text-xl font-bold mb-6">About Us</h3>
-            <ul className="flex flex-col gap-4">
+            <Link href="/about" className="text-xl font-bold">About Us</Link>
+            <ul className="flex flex-col gap-4 pt-6">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-base">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-base">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors text-base">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors text-base">
                   Terms & Condition
                 </Link>
               </li>
@@ -107,7 +107,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col items-center justify-center">
-          <p className="text-gray-400 text-xs text-center">
+          <p className="text-gray-400 text-sm text-center">
             © 2025 We Buy Dead Stocks Dubai,UAE. All Right Reserved by WeBuyDeadStock
           </p>
         </div>
