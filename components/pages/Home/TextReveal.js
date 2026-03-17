@@ -62,7 +62,7 @@ const TextReveal = () => {
                 <div className="w-full h-[1px] bg-gray-300 mt-[6.1vw] md:mt-[1.25vw] 2xl:mt-6 mb-[8.2vw] md:mb-[1.6vw] 2xl:mb-8"></div>
                 <p
                     ref={textRef}
-                    className="text-[5.5vw] md:text-[1.8vw] 2xl:text-[34px] leading-[1.4] md:leading-[1.3] font-normal text-[#e5e7eb] mb-[15vw] md:mb-[6.6vw] 2xl:mb-32"
+                    className="text-[5.5vw] md:text-[1.8vw] 2xl:text-[34px] leading-[1.4] md:leading-[1.3] font-normal text-[#e5e7eb] mb-[1vw] md:mb-[6.6vw] 2xl:mb-32"
                 >
                     {text.split(" ").map((word, index) => (
                         <span key={index} className="word inline-block mr-[1.5vw] md:mr-[0.5vw] 2xl:mr-[10px]">
@@ -71,7 +71,7 @@ const TextReveal = () => {
                     ))}
                 </p>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-y-[10vw] gap-x-[5vw] md:gap-[1.25vw] 2xl:gap-6 w-full mt-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-y-[10vw] gap-x-[5vw] md:gap-[1.25vw] 2xl:gap-6 w-full">
                     <div className="flex flex-col">
                         <h3 className="text-[#7ED957] text-[9.2vw] md:text-[2.4vw] 2xl:text-[46px] font-bold mb-[2vw] md:mb-[0.4vw] 2xl:mb-2">
                             21+

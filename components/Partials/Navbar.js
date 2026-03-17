@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Languages, ChevronDown, X, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Languages, ChevronDown, X, Instagram, Linkedin, Facebook, Youtube } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
@@ -93,12 +93,12 @@ const Navbar = () => {
             <Link href="https://www.webuydeadstock.com/get-free-valuation-dead-stocks" className="text-white font-semibold tracking-wider uppercase hover:text-gray-300 transition-colors" style={{ fontSize: 'min(0.97vw, 14px)' }}>
               GET A FREE VALUATION
             </Link>
-            <Link href="https://calendly.com/webuydeadstocks-info/30min?primary_color=80d741" className="flex items-center justify-center bg-white text-black font-bold tracking-wider uppercase hover:bg-gray-100" style={{ fontSize: 'min(0.97vw, 14px)', padding: 'min(0.7vw, 10px) min(1.6vw, 24px)' }}>
+            <Link href="https://calendly.com/webuydeadstocks-info/30min?primary_color=80d741" className="flex items-center justify-center bg-transparent text-green-500 border border-green-500 font-bold tracking-wider uppercase hover:bg-green-500 duration-500 hover:text-white" style={{ fontSize: 'min(0.97vw, 14px)', padding: 'min(0.7vw, 10px) min(1.6vw, 24px)' }}>
               BOOK A CALL
             </Link>
           </div>
 
-          <Link href="/contact" className="flex items-center justify-center bg-white text-black font-bold tracking-wider uppercase hover:bg-gray-100 transition-colors max-md:hidden" style={{ fontSize: 'clamp(12px, 0.97vw, 14px)', padding: 'clamp(8px, 0.7vw, 10px) clamp(16px, 1.6vw, 24px)' }}>
+          <Link href="/contact" className="flex items-center justify-center bg-transparent text-green-500 border border-green-500 font-bold tracking-wider uppercase hover:bg-green-500 duration-500 hover:text-white transition-colors max-md:hidden" style={{ fontSize: 'clamp(12px, 0.97vw, 14px)', padding: 'clamp(8px, 0.7vw, 10px) clamp(16px, 1.6vw, 24px)' }}>
             CONTACT US
           </Link>
           <button onClick={toggleSidebar} className="flex flex-col cursor-pointer focus:outline-none" style={{ gap: 'clamp(4px, 0.42vw, 6px)', marginLeft: 'clamp(16px, 1vw, 16px)' }}>
@@ -192,17 +192,17 @@ const Navbar = () => {
           </div>
           <div className="overflow-hidden" style={{ marginTop: 'min(1.2vw, 24px)' }}>
             <div className="nav-link-item translate-y-full flex items-center" style={{ gap: 'min(1.2vw, 24px)' }}>
-              <Link href="https://www.instagram.com/webuydeadstocks?utm_source=ig_web_button_share_sheet" target="_blank" className="text-white hover:text-gray-300 transition-colors">
+              <Link href="https://www.instagram.com/webuydeadstocks/" target="_blank" className="text-white hover:text-gray-300 transition-colors">
                 <Instagram strokeWidth={1.5} style={{ width: 'min(1.4vw, 24px)', height: 'min(1.4vw, 24px)' }} />
               </Link>
-              <Link href="https://www.linkedin.com/company/chaudary-anwar-tr.-co-llc/posts/?feedView=all" target="_blank" className="text-white hover:text-gray-300 transition-colors">
+              <Link href="https://www.linkedin.com/company/webuydeadstocks/" target="_blank" className="text-white hover:text-gray-300 transition-colors">
                 <Linkedin strokeWidth={1.5} style={{ width: 'min(1.4vw, 24px)', height: 'min(1.4vw, 24px)' }} />
               </Link>
               <Link href="https://www.facebook.com/webuydeadstocks/" target="_blank" className="text-white hover:text-gray-300 transition-colors">
                 <Facebook strokeWidth={1.5} style={{ width: 'min(1.4vw, 24px)', height: 'min(1.4vw, 24px)' }} />
               </Link>
-              <Link href="https://www.tiktok.com/@webuydeadstocks.com?is_from_webapp=1&sender_device=pc" target="_blank" className="text-white hover:text-gray-300 transition-colors">
-                <Image src="/images/tiktok-outline.svg" alt="Tiktok" className="invert" width={24} height={24} style={{ width: 'min(1.4vw, 24px)', height: 'min(1.4vw, 24px)' }} />
+              <Link href="https://www.youtube.com/@WeBuyDeadStocks" target="_blank" className="text-white hover:text-gray-300 transition-colors">
+                <Youtube strokeWidth={1.5} style={{ width: 'min(1.4vw, 24px)', height: 'min(1.4vw, 24px)' }} />
               </Link>
             </div>
           </div>

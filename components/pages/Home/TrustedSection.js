@@ -2,9 +2,9 @@ import { Smile, Handshake, Lightbulb } from "lucide-react";
 
 const TrustedSection = () => {
     return (
-        <section className="w-full min-h-screen md:h-screen bg-white py-16 md:py-24">
-            <div className="w-full mx-auto flex flex-col h-auto md:h-[90%] justify-center md:justify-between px-4 sm:px-20 lg:px-20 gap-10 md:gap-0">
-                <h2 className="text-3xl md:text-5xl lg:text-[54px] leading-[1.3] md:leading-[1.2] text-[#333333] mb-12 md:mb-32 mt-4 md:mt-0 break-words">
+        <section className="w-full h-fit bg-white py-16 md:py-20 lg:py-24">
+            <div className="w-full mx-auto flex flex-col h-auto justify-center px-4 sm:px-20 lg:px-20 gap-12 md:gap-[25vh]">
+                <h2 className="text-3xl md:text-5xl lg:text-[54px] leading-[1.3] md:leading-[1.2] text-[#333333] mt-4 md:mt-0 break-words">
                     Trusted By <span className="font-bold text-[#6CC24A]">Startups, Manufacturers,</span>
                     <br className="hidden md:block" />
                     <span className="font-bold text-[#6CC24A]">Traders</span> &{" "}

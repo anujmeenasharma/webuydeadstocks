@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Landing = () => {
@@ -22,12 +23,12 @@ const Landing = () => {
           <h1 className="text-[#7ED957] text-6xl md:text-[5.7vw] 2xl:text-[110px] font-bold tracking-tighter leading-none mb-10 md:mb-[2.1vw] 2xl:mb-10 md:whitespace-nowrap">
             Cash & Space.
           </h1>
-          <button className="group flex items-center gap-3 md:gap-[0.6vw] 2xl:gap-3 border border-white text-white px-7 py-3 md:px-[1.4vw] md:py-[0.6vw] 2xl:px-7 2xl:py-3 text-sm md:text-[0.8vw] 2xl:text-base font-semibold tracking-[0.15em] hover:bg-white hover:text-black transition-all uppercase cursor-pointer md:whitespace-nowrap">
+          <Link href="https://www.webuydeadstock.com/get-free-valuation-dead-stocks" className="group flex items-center gap-3 md:gap-[0.6vw] 2xl:gap-3 border border-white text-white px-7 py-3 md:px-[1.4vw] md:py-[0.6vw] 2xl:px-7 2xl:py-3 text-sm md:text-[0.8vw] 2xl:text-base font-semibold tracking-[0.15em] hover:bg-white hover:text-black transition-all uppercase cursor-pointer md:whitespace-nowrap">
             GET FREE VALUATION
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-[1vw] md:w-[1vw] 2xl:h-5 2xl:w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </button>
+          </Link>
         </div>
         <div className="flex justify-center md:justify-end w-full md:w-auto mt-12 md:mt-0">
           <p className="text-white text-xl md:text-[1.3vw] 2xl:text-[26px] font-normal text-center leading-snug md:whitespace-nowrap md:text-right 2xl:text-center">
