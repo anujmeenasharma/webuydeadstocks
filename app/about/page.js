@@ -142,8 +142,9 @@ export default function AboutUs() {
             We Have You Covered
           </h2>
           <Link
-            href="#"
+            href="https://webuydeadstock.com"
             className="inline-block bg-white text-gray-900 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+            target="_blank"
           >
             Get Free Valuation
           </Link>
@@ -208,7 +209,7 @@ export default function AboutUs() {
           {/* Contact Button */}
           <div className="text-center">
             <Link
-              href="#"
+              href="/contact"
               className="inline-block border-2 border-gray-900 text-gray-900 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-gray-900 hover:text-white transition-colors"
             >
               Contact US
