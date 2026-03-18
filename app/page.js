@@ -83,6 +83,24 @@ const page = () => {
     }}
   />
 
+          <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "We Buy Dead Stocks",
+            "url": "https://webuydeadstocks.com/",
+            "description": "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region.",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://webuydeadstocks.com/services/{search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
+
   {/* LOCAL BUSINESS SCHEMA */}
   <script
     type="application/ld+json"
