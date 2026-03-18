@@ -114,14 +114,14 @@ const Pricing = () => {
                     </h3>
                 </div>
                 <div className="w-full md:w-[45%] grid overflow-hidden items-start pb-4">
-                    <p className="subtitle-1 col-start-1 row-start-1 text-white text-xs md:text-sm lg:text-base leading-relaxed font-light z-10">
+                    <p className="subtitle-1 col-start-1 row-start-1 text-white text-lg leading-relaxed z-10">
                         That 100% investment you made? Its valuehas now drastically dropped.
                         With no buyers and no movement, your dead stock is losing worth every
                         single day. What was once a valuable asset has turned into a liability,
                         taking up space and costing you more in storage and opportunity. But it
                         doesn&#39;t have to stay this way.
                     </p>
-                    <p className="subtitle-2 col-start-1 row-start-1 text-white text-xs md:text-sm lg:text-base leading-relaxed font-light opacity-0 invisible z-20">
+                    <p className="subtitle-2 col-start-1 row-start-1 text-white leading-relaxed opacity-0 text-lg invisible z-20">
                         Holding on to excess inventory costs more than eventually selling it off.
                         That&#39;s why we offer a straightforward pricing model when we buy dead
                         stock in the GCC. We will purchase your stock at 5-20% of your original
