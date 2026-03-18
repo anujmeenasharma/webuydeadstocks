@@ -41,7 +41,7 @@ const LatestBlogs = () => {
                     ) : (
                         blogs.map((blog, index) => {
                             const post = blog.node;
-                            const blogUrl = `/blogs/${post.handle}`;
+                            const blogUrl = `/Blogs/${post.handle}`;
                             const imageUrl = post.image?.url || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop";
 
                             return (
@@ -82,7 +82,7 @@ const LatestBlogs = () => {
                     )}
                 </div>
                 <div className="flex justify-center mt-16 md:mt-20">
-                    <Link href="/blogs" className="border border-[#8CC63F] text-[#8CC63F] px-10 py-3 text-[14px] font-semibold rounded hover:bg-[#8CC63F] hover:text-white transition-all duration-300 uppercase tracking-widest cursor-pointer">
+                    <Link href="/Blogs" className="border border-[#8CC63F] text-[#8CC63F] px-10 py-3 text-[14px] font-semibold rounded hover:bg-[#8CC63F] hover:text-white transition-all duration-300 uppercase tracking-widest cursor-pointer">
                         VIEW ALL
                     </Link>
                 </div>

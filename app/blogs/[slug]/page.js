@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
         title: article.seo?.title || article.title,
         description: article.seo?.description || article.excerpt,
         alternates: {
-            canonical: `/blogs/${slug}`,
+            canonical: `/Blogs/${slug}`,
         },
     };
 }
@@ -46,7 +46,7 @@ export default async function BlogPostPage({ params }) {
                     The page you&apos;re looking for could not be found or is temporarily unavailable.
                 </p>
                 <Link
-                    href="/blogs"
+                    href="/Blogs"
                     className="inline-block bg-black text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
                 >
                     Back to Blogs

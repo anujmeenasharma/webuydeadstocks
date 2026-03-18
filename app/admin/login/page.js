@@ -29,7 +29,7 @@ export default function AdminLogin() {
 
       if (res.ok) {
         // Redirect to admin dashboard
-        router.push('/admin/blogs');
+        router.push('/admin/Blogs');
         router.refresh();
       } else {
         setError(data.message || 'Login failed');
@@ -88,9 +88,8 @@ export default function AdminLogin() {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full py-3 px-4 rounded-lg text-white font-semibold font-montserrat text-lg transition-transform active:scale-[0.98] flex justify-center items-center ${
-                loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-black hover:bg-gray-800 shadow-md hover:shadow-lg'
-              }`}
+              className={`w-full py-3 px-4 rounded-lg text-white font-semibold font-montserrat text-lg transition-transform active:scale-[0.98] flex justify-center items-center ${loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-black hover:bg-gray-800 shadow-md hover:shadow-lg'
+                }`}
             >
               {loading ? (
                 <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -99,7 +98,7 @@ export default function AdminLogin() {
               )}
             </button>
           </form>
-          
+
           <div className="mt-8 text-center">
             <Link href="/" className="text-sm text-gray-500 hover:text-black transition-colors font-montserrat">
               &larr; Back to Website

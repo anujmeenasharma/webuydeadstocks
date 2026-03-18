@@ -5,15 +5,15 @@ import Blog from "@/models/Blog";
 export async function GET(request, { params }) {
     try {
         await connectToDatabase();
-        
+
         const { slug } = await params;
-        
+
         const blog = await Blog.findOne({ handle: slug });
 
         if (!blog) {
             return NextResponse.json({ error: "Blog not found" }, { status: 404 });
         }
-        
+
         // Format it similarly to the Shopify single article format
         const formattedBlog = {
             id: blog._id.toString(),

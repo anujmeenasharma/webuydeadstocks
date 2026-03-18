@@ -74,7 +74,7 @@ export default function AdminBlogsPage() {
                 <span className="hidden sm:inline">Logout</span>
             </button>
             <div className="max-w-6xl mx-auto space-y-8 mt-12 lg:mt-0">
-                
+
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <h1 className="text-2xl font-bold">Manage Blogs</h1>
@@ -89,7 +89,7 @@ export default function AdminBlogsPage() {
 
                 {/* Filter & List Card */}
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                    
+
                     {/* Search Bar */}
                     <div className="p-4 border-b border-gray-200 flex items-center gap-2">
                         <div className="relative flex-1 max-w-md">
@@ -148,7 +148,7 @@ export default function AdminBlogsPage() {
                                         </td>
                                         <td className="px-6 py-4 text-right space-x-2">
                                             <Link
-                                                href={`/admin/blogs/${blog.handle}`}
+                                                href={`/admin/Blogs/${blog.handle}`}
                                                 className="inline-flex items-center gap-1 text-sm bg-white border border-gray-300 shadow-sm px-3 py-1.5 rounded hover:bg-gray-50 transition-colors"
                                             >
                                                 <PenSquare className="w-4 h-4 text-gray-600" />

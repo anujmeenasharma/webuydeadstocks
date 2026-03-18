@@ -120,7 +120,7 @@ export default function UploadBlogPage() {
 
             setSuccess(true);
             setTimeout(() => {
-                router.push("/admin/blogs");
+                router.push("/admin/Blogs");
             }, 1000);
         } catch (err) {
             setError(err.message);
@@ -134,7 +134,7 @@ export default function UploadBlogPage() {
             {/* Header */}
             <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
                 <div className="flex items-center gap-4">
-                    <Link href="/blogs" className="p-2 hover:bg-gray-100 rounded-md transition duration-150">
+                    <Link href="/Blogs" className="p-2 hover:bg-gray-100 rounded-md transition duration-150">
                         <ArrowLeft className="w-5 h-5 text-gray-500" />
                     </Link>
                     <h1 className="text-xl font-semibold">Add blog post</h1>
@@ -223,7 +223,7 @@ export default function UploadBlogPage() {
                                     {formData.seoTitle || formData.title || "Page title"}
                                 </h3>
                                 <p className="text-green-700 text-sm truncate">
-                                    https://webuydeadstocks.com/blogs/{formData.handle || "handle"}
+                                    https://webuydeadstocks.com/Blogs/{formData.handle || "handle"}
                                 </p>
                                 <p className="text-gray-600 text-sm mt-1 line-clamp-2 w-full">
                                     {formData.seoDescription || formData.excerpt || "Description placeholder..."}
@@ -256,7 +256,7 @@ export default function UploadBlogPage() {
                                 <label className="block text-sm font-medium mb-1">URL and handle</label>
                                 <div className="flex items-center">
                                     <span className="bg-gray-100 border border-gray-300 border-r-0 text-gray-500 px-3 py-2 rounded-l text-sm">
-                                        /blogs/
+                                        /Blogs/
                                     </span>
                                     <input
                                         type="text"

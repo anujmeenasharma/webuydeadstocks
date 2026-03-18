@@ -25,7 +25,7 @@ export default function Career() {
         {/* Content overlay */}
         <div className="relative h-full w-full px-6 sm:px-8 lg:px-12 flex flex-col justify-center">
           <Link
-            href="/blogs"
+            href="/Blogs"
             className="inline-flex items-center text-white hover:text-gray-200 mb-6 transition-colors text-lg"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

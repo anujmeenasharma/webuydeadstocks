@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import "react-quill-new/dist/quill.snow.css"; 
+import "react-quill-new/dist/quill.snow.css";
 import { ArrowLeft, Save, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useRouter, useParams } from "next/navigation";
@@ -39,7 +39,7 @@ export default function EditBlogPage() {
                 const res = await fetch(`/api/blogs/${slug}`);
                 if (!res.ok) throw new Error("Failed to load blog");
                 const data = await res.json();
-                
+
                 setFormData({
                     title: data.title || "",
                     handle: data.handle || "",
@@ -64,12 +64,12 @@ export default function EditBlogPage() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        
+
         let finalValue = value;
         if (name === "handle") {
             finalValue = value.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
         }
-        
+
         setFormData((prev) => ({ ...prev, [name]: finalValue }));
     };
 
@@ -80,8 +80,8 @@ export default function EditBlogPage() {
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            setFormData(prev => ({ 
-                ...prev, 
+            setFormData(prev => ({
+                ...prev,
                 imageFile: file,
                 imagePreview: URL.createObjectURL(file)
             }));
@@ -143,9 +143,9 @@ export default function EditBlogPage() {
             }
 
             setSuccess(true);
-            
+
             setTimeout(() => {
-                router.push("/admin/blogs");
+                router.push("/admin/Blogs");
             }, 1000);
 
         } catch (err) {
@@ -168,7 +168,7 @@ export default function EditBlogPage() {
             {/* Header */}
             <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
                 <div className="flex items-center gap-4">
-                    <Link href="/admin/blogs" className="p-2 hover:bg-gray-100 rounded-md transition duration-150">
+                    <Link href="/admin/Blogs" className="p-2 hover:bg-gray-100 rounded-md transition duration-150">
                         <ArrowLeft className="w-5 h-5 text-gray-500" />
                     </Link>
                     <h1 className="text-xl font-semibold">Edit blog post</h1>
@@ -184,10 +184,10 @@ export default function EditBlogPage() {
             </header>
 
             <main className="max-w-5xl mx-auto px-6 mt-8 flex flex-col lg:flex-row gap-6">
-                
+
                 {/* Main Content Column */}
                 <div className="flex-1 space-y-6">
-                    
+
                     {/* Title and Content Card */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
                         <div className="space-y-4">
@@ -204,20 +204,20 @@ export default function EditBlogPage() {
                             <div>
                                 <label className="block text-sm font-medium mb-1 mt-6">Content</label>
                                 <div className="border rounded bg-white overflow-hidden" style={{ minHeight: '300px' }}>
-                                    <ReactQuill 
-                                        theme="snow" 
-                                        value={formData.contentHtml} 
+                                    <ReactQuill
+                                        theme="snow"
+                                        value={formData.contentHtml}
                                         onChange={handleContentChange}
-                                        className="h-64 mb-12" 
+                                        className="h-64 mb-12"
                                         modules={{
                                             toolbar: [
                                                 [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
                                                 ['bold', 'italic', 'underline', 'strike'],
                                                 [{ 'color': [] }, { 'background': [] }],
-                                                [{ 'script': 'sub'}, { 'script': 'super' }],
+                                                [{ 'script': 'sub' }, { 'script': 'super' }],
                                                 ['blockquote', 'code-block'],
-                                                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                                                [{ 'indent': '-1'}, { 'indent': '+1' }, { 'align': [] }],
+                                                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                                                [{ 'indent': '-1' }, { 'indent': '+1' }, { 'align': [] }],
                                                 ['link', 'image', 'video'],
                                                 ['clean']
                                             ]
@@ -272,7 +272,7 @@ export default function EditBlogPage() {
                                 <label className="block text-sm font-medium mb-1">URL and handle</label>
                                 <div className="flex items-center">
                                     <span className="bg-gray-100 border border-gray-300 border-r-0 text-gray-500 px-3 py-2 rounded-l text-sm">
-                                        /blogs/
+                                        /Blogs/
                                     </span>
                                     <input
                                         type="text"
@@ -289,7 +289,7 @@ export default function EditBlogPage() {
 
                 {/* Sidebar Column */}
                 <div className="w-full lg:w-80 flex-shrink-0 space-y-6">
-                    
+
                     {/* Featured Image */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
                         <h2 className="text-lg font-medium mb-4">Featured image</h2>
@@ -336,7 +336,7 @@ export default function EditBlogPage() {
                     Blog updated successfully!
                 </div>
             )}
-            
+
         </div>
     );
 }

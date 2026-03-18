@@ -46,7 +46,7 @@ const Navbar = () => {
     { label: "HOME", href: "/" },
     { label: "SERVICES", href: "/services" },
     { label: "ABOUT US", href: "/about" },
-    { label: "BLOGS", href: "/blogs" },
+    { label: "BLOGS", href: "/Blogs" },
     { label: "BOOK A CALL", href: "https://calendly.com/webuydeadstocks-info/30min?primary_color=80d741" },
     { label: "CONTACT US", href: "/contact" },
   ];

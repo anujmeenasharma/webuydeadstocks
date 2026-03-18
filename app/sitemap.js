@@ -24,7 +24,7 @@ export default async function sitemap() {
     }
 
     const blogUrls = allBlogs.map((blog) => ({
-      url: `${baseUrl}/blogs/${blog.slug}`,
+      url: `${baseUrl}/Blogs/${blog.slug}`,
       lastModified: blog.updatedAt
         ? new Date(blog.updatedAt).toISOString()
         : new Date().toISOString(),

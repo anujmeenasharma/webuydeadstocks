@@ -76,7 +76,7 @@ const BlogPage = () => {
             <section className="relative h-[50vh] w-full overflow-hidden bg-gray-900 text-white">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/blogs/blogs.webp"
+                        src="/images/Blogs/Blogs.webp"
                         alt="Blog Hero Background"
                         fill
                         className="object-cover opacity-60"
@@ -131,7 +131,7 @@ const BlogPage = () => {
                         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                             {filteredBlogs.map((blog) => {
                                 const post = blog.node;
-                                const blogUrl = `/blogs/${post.handle}`;
+                                const blogUrl = `/Blogs/${post.handle}`;
 
                                 const imageUrl = post.image?.url || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop";
 
@@ -195,7 +195,7 @@ const BlogPage = () => {
                         "@context": "https://schema.org",
                         "@type": "Blog",
                         "name": "We Buy Dead Stocks Blog",
-                        "url": "https://webuydeadstocks.com/blogs",
+                        "url": "https://webuydeadstocks.com/Blogs",
                         "description": "Discover insights, tips, and stories to inform and inspire your journey."
                     })
                 }}
