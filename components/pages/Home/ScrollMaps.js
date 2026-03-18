@@ -53,9 +53,9 @@ const ScrollMaps = () => {
             const mapSvg = containerRef.current.querySelector('#mapSvg');
             // We just clear our appended transform so ScrollTrigger takes over naturally again
             gsap.to(mapSvg, {
-                scale: 2.5,
+                scale: 2.2,
                 xPercent: 0,
-                yPercent: -15,
+                yPercent: -5,
                 duration: 0.5,
                 ease: 'power2.inOut'
             });
@@ -108,9 +108,9 @@ const ScrollMaps = () => {
         gsap.set('#KuwaitText, #BahrainText, #QatarText, #UaeText, #OmanText, #SaudiText', { autoAlpha: 0 });
 
         tl.to(mapSvg, {
-            scale: 2.5,
+            scale: 2.2,
             xPercent: 0,
-            yPercent: -15,
+            yPercent: -5,
             duration: 2,
             ease: "power2.inOut"
         })

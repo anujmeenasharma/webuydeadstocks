@@ -40,7 +40,6 @@ const page = () => {
       <TrustedSection />
       <Recycling />
       <LatestBlogs />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
