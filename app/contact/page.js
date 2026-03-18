@@ -205,7 +205,7 @@ const ContactPage = () => {
                             Reach out to us at
                         </h3>
                         <div className="flex gap-4 mb-10">
-                            <Link href="https://www.instagram.com/webuydeadstocks?utm_source=ig_web_button_share_sheet" target="_blank" className="text-[#80D741] hover:scale-110 transition-transform">
+                            <Link href="https://www.instagram.com/webuydeadstocks" target="_blank" className="text-[#80D741] hover:scale-110 transition-transform">
                                 <Instagram strokeWidth={1.5} className="w-11 h-11" />
                             </Link>
                             <Link href="https://www.linkedin.com/company/chaudary-anwar-tr.-co-llc/posts/?feedView=all" target="_blank" className="text-[#80D741] hover:scale-110 transition-transform">

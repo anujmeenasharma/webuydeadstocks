@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-4">
-              <Link href="https://www.instagram.com/webuydeadstocks?utm_source=ig_web_button_share_sheet" target="_blank" className="text-white hover:text-gray-300 transition-colors">
+              <Link href="https://www.instagram.com/webuydeadstocks" target="_blank" className="text-white hover:text-gray-300 transition-colors">
                 <Instagram className="w-9 h-9 pointer-events-none" strokeWidth={1.25} />
               </Link>
               <Link href="https://www.linkedin.com/company/chaudary-anwar-tr.-co-llc/posts/?feedView=all" target="_blank" className="text-white hover:text-gray-300 transition-colors">
