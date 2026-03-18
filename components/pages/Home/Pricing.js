@@ -115,7 +115,7 @@ const Pricing = () => {
                 </div>
                 <div className="w-full md:w-[45%] grid overflow-hidden items-start pb-4">
                     <p className="subtitle-1 col-start-1 row-start-1 text-white text-lg leading-relaxed z-10">
-                        That 100% investment you made? Its valuehas now drastically dropped.
+                        That 100% investment you made? Its value has now drastically dropped.
                         With no buyers and no movement, your dead stock is losing worth every
                         single day. What was once a valuable asset has turned into a liability,
                         taking up space and costing you more in storage and opportunity. But it

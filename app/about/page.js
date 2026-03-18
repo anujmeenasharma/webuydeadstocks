@@ -56,7 +56,7 @@ export default function AboutUs() {
                 Trust Us, We're Experts At Dead Stock Liquidation
               </h2>
 
-              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+              <p className="text-black font-medium text-lg mb-6 leading-relaxed">
                 We understand that every client's product is different, and that is
                 why our dead stock liquidation evaluations are never cookie-
                 cutter. For over two decades, we've been conducting transparent
@@ -166,7 +166,7 @@ export default function AboutUs() {
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 THOUSANDS OF HAPPY CLIENTS
               </h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-black font-medium text-lg leading-relaxed">
                 We have been a leading deadstock buyer in the GCC region for decades and have
                 earned the trust of many businesses for delivering quality services.
               </p>
@@ -183,7 +183,7 @@ export default function AboutUs() {
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 FAIR & HONEST DEALS
               </h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-black font-medium text-lg leading-relaxed">
                 Our transparent, market-value-based evaluation process ensures you get
                 maximum value for your surplus or dead inventory.
               </p>
@@ -199,7 +199,7 @@ export default function AboutUs() {
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 TAILORED SOLUTIONS FOR YOUR NEEDS
               </h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-black font-medium text-lg leading-relaxed">
                 Inventory never comes equal. That is why we tailor our inventory liquidation services
                 to meet your unique needs.
               </p>
