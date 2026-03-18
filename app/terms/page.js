@@ -138,7 +138,7 @@ export default function Terms() {
                         "@context": "https://schema.org",
                         "@type": "WebPage",
                         "name": "Terms and Conditions - We Buy Dead Stocks",
-                        "url": "https://www.webuydeadstocks.com/terms"
+                        "url": "https://webuydeadstocks.com/terms"
                     })
                 }}
             />

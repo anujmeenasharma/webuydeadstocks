@@ -129,7 +129,7 @@ export default function Environment() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Environment - We Buy Dead Stocks",
-            "url": "https://www.webuydeadstocks.com/environment"
+            "url": "https://webuydeadstocks.com/environment"
           })
         }}
       />

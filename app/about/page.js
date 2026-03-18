@@ -224,7 +224,7 @@ export default function AboutUs() {
             "@context": "https://schema.org",
             "@type": "AboutPage",
             "name": "About Us - We Buy Dead Stocks",
-            "url": "https://www.webuydeadstocks.com/about",
+            "url": "https://webuydeadstocks.com/about",
             "description": "Established in 2003, We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region.",
             "publisher": {
               "@type": "Organization",

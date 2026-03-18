@@ -11,12 +11,12 @@ import ScrollMaps from "@/components/pages/Home/ScrollMaps";
 
 export const metadata = {
   title: {
-    absolute: "We Buy Dead Stocks | Dead stock buyer in the UAE and GCC region",
+    absolute: "We Buy Dead Stocks | Dead stock buyer in the UAE and GCC",
   },
   description:
     "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region. We purchase surplus inventory, expired goods, and excess stock.",
   alternates: {
-    canonical: "https://www.webuydeadstocks.com/",
+    canonical: "https://webuydeadstocks.com/",
   },
   robots: {
     index: true,
@@ -48,11 +48,11 @@ const page = () => {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "We Buy Dead Stocks",
-            "url": "https://www.webuydeadstocks.com/",
+            "url": "https://webuydeadstocks.com/",
             "description": "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region.",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://www.webuydeadstocks.com/services/{search_term_string}",
+              "target": "https://webuydeadstocks.com/services/{search_term_string}",
               "query-input": "required name=search_term_string"
             }
           })

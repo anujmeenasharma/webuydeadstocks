@@ -33,7 +33,7 @@ export default async function CategoryPage({ params }) {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "name": `${categoryName} Services - We Buy Dead Stocks`,
-                        "url": `https://www.webuydeadstocks.com/services/${category}`,
+                        "url": `https://webuydeadstocks.com/services/${category}`,
                         "provider": {
                             "@type": "Organization",
                             "name": "We Buy Dead Stocks"

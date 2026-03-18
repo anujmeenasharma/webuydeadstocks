@@ -267,7 +267,7 @@ const ContactPage = () => {
                         "@context": "https://schema.org",
                         "@type": "ContactPage",
                         "name": "Contact Us - We Buy Dead Stocks",
-                        "url": "https://www.webuydeadstocks.com/contact",
+                        "url": "https://webuydeadstocks.com/contact",
                         "description": "Get in touch with We Buy Dead Stocks. We're excited to hear from you.",
                         "mainEntity": {
                             "@type": "Organization",

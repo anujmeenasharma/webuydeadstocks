@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-import "react-quill-new/dist/quill.snow.css"; 
+import "react-quill-new/dist/quill.snow.css";
 import { ArrowLeft, Save } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -31,7 +31,7 @@ export default function UploadBlogPage() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        
+
         // Ensure handle is extremely url-safe (lowercase, hyphens instead of spaces)
         let finalValue = value;
         if (name === "handle") {
@@ -39,7 +39,7 @@ export default function UploadBlogPage() {
         }
 
         setFormData((prev) => ({ ...prev, [name]: finalValue }));
-        
+
         // Auto-generate handle from title if handle is empty
         if (name === "title" && !formData.handle) {
             setFormData((prev) => ({
@@ -56,8 +56,8 @@ export default function UploadBlogPage() {
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            setFormData(prev => ({ 
-                ...prev, 
+            setFormData(prev => ({
+                ...prev,
                 imageFile: file,
                 imagePreview: URL.createObjectURL(file)
             }));
@@ -150,10 +150,10 @@ export default function UploadBlogPage() {
             </header>
 
             <main className="max-w-5xl mx-auto px-6 mt-8 flex flex-col lg:flex-row gap-6">
-                
+
                 {/* Main Content Column */}
                 <div className="flex-1 space-y-6">
-                    
+
                     {/* Title and Content Card */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
                         <div className="space-y-4">
@@ -171,20 +171,20 @@ export default function UploadBlogPage() {
                             <div>
                                 <label className="block text-sm font-medium mb-1 mt-6">Content</label>
                                 <div className="border rounded bg-white overflow-hidden" style={{ minHeight: '300px' }}>
-                                    <ReactQuill 
-                                        theme="snow" 
-                                        value={formData.contentHtml} 
+                                    <ReactQuill
+                                        theme="snow"
+                                        value={formData.contentHtml}
                                         onChange={handleContentChange}
-                                        className="h-64 mb-12" 
+                                        className="h-64 mb-12"
                                         modules={{
                                             toolbar: [
                                                 [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
                                                 ['bold', 'italic', 'underline', 'strike'],
                                                 [{ 'color': [] }, { 'background': [] }],
-                                                [{ 'script': 'sub'}, { 'script': 'super' }],
+                                                [{ 'script': 'sub' }, { 'script': 'super' }],
                                                 ['blockquote', 'code-block'],
-                                                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                                                [{ 'indent': '-1'}, { 'indent': '+1' }, { 'align': [] }],
+                                                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                                                [{ 'indent': '-1' }, { 'indent': '+1' }, { 'align': [] }],
                                                 ['link', 'image', 'video'],
                                                 ['clean']
                                             ]
@@ -218,12 +218,12 @@ export default function UploadBlogPage() {
                             <h2 className="text-lg font-medium">Search engine listing preview</h2>
                         </div>
                         <div className="space-y-4 pt-2 border-t border-gray-200 mt-2">
-                             <div className="mb-4">
+                            <div className="mb-4">
                                 <h3 className="text-blue-800 text-lg hover:underline cursor-pointer truncate">
                                     {formData.seoTitle || formData.title || "Page title"}
                                 </h3>
                                 <p className="text-green-700 text-sm truncate">
-                                    https://www.webuydeadstocks.com/blogs/{formData.handle || "handle"}
+                                    https://webuydeadstocks.com/blogs/{formData.handle || "handle"}
                                 </p>
                                 <p className="text-gray-600 text-sm mt-1 line-clamp-2 w-full">
                                     {formData.seoDescription || formData.excerpt || "Description placeholder..."}
@@ -252,7 +252,7 @@ export default function UploadBlogPage() {
                                 />
                                 <p className="text-xs text-gray-500 mt-1">{formData.seoDescription.length} of 320 characters used</p>
                             </div>
-                             <div>
+                            <div>
                                 <label className="block text-sm font-medium mb-1">URL and handle</label>
                                 <div className="flex items-center">
                                     <span className="bg-gray-100 border border-gray-300 border-r-0 text-gray-500 px-3 py-2 rounded-l text-sm">
@@ -273,7 +273,7 @@ export default function UploadBlogPage() {
 
                 {/* Sidebar Column */}
                 <div className="w-full lg:w-80 flex-shrink-0 space-y-6">
-                    
+
                     {/* Organization / Featured Image */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
                         <h2 className="text-lg font-medium mb-4">Featured image</h2>
@@ -320,7 +320,7 @@ export default function UploadBlogPage() {
                     Blog post saved successfully! Redirecting...
                 </div>
             )}
-            
+
         </div>
     );
 }

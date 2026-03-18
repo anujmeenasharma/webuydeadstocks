@@ -181,7 +181,7 @@ export default function Privacy() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Privacy Policy - We Buy Dead Stocks",
-            "url": "https://www.webuydeadstocks.com/privacy"
+            "url": "https://webuydeadstocks.com/privacy"
           })
         }}
       />

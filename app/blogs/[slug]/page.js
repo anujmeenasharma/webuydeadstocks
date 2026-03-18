@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }) {
                         "@context": "https://schema.org",
                         "@type": "BlogPosting",
                         "headline": article.title,
-                        "image": article.image ? article.image.url : "https://www.webuydeadstocks.com/images/default-blog.jpg",
+                        "image": article.image ? article.image.url : "https://webuydeadstocks.com/images/default-blog.jpg",
                         "datePublished": article.publishedAt,
                         "author": {
                             "@type": "Organization",

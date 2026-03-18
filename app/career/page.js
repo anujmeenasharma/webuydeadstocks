@@ -141,7 +141,7 @@ export default function Career() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Career - We Buy Dead Stocks",
-            "url": "https://www.webuydeadstocks.com/career"
+            "url": "https://webuydeadstocks.com/career"
           })
         }}
       />

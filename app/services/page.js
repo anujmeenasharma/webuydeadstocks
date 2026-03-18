@@ -106,7 +106,7 @@ export default function Services() {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "Our Services - We Buy Dead Stocks",
-            "url": "https://www.webuydeadstocks.com/services",
+            "url": "https://webuydeadstocks.com/services",
             "description": "We purchase a wide range of used and unused surplus, overstock or dead inventory and scrap from multiple industries."
           })
         }}

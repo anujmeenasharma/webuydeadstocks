@@ -195,7 +195,7 @@ const BlogPage = () => {
                         "@context": "https://schema.org",
                         "@type": "Blog",
                         "name": "We Buy Dead Stocks Blog",
-                        "url": "https://www.webuydeadstocks.com/blogs",
+                        "url": "https://webuydeadstocks.com/blogs",
                         "description": "Discover insights, tips, and stories to inform and inspire your journey."
                     })
                 }}

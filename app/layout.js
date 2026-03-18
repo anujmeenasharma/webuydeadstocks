@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.webuydeadstocks.com"),
+  metadataBase: new URL("https://webuydeadstocks.com"),
   title: {
     template: "We Buy Dead Stocks | %s",
     default: "We Buy Dead Stocks",
@@ -55,8 +55,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "We Buy Dead Stocks",
-              "url": "https://www.webuydeadstocks.com",
-              "logo": "https://www.webuydeadstocks.com/images/logo.png",
+              "url": "https://webuydeadstocks.com",
+              "logo": "https://webuydeadstocks.com/images/logo.png",
               "sameAs": [
                 "https://www.facebook.com/webuydeadstocks/",
                 "https://www.instagram.com/webuydeadstocks",
