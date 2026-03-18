@@ -148,7 +148,7 @@ export default function AdminBlogsPage() {
                                         </td>
                                         <td className="px-6 py-4 text-right space-x-2">
                                             <Link
-                                                href={`/admin/Blogs/${blog.handle}`}
+                                                href={`/admin/blogs/${blog.handle}`}
                                                 className="inline-flex items-center gap-1 text-sm bg-white border border-gray-300 shadow-sm px-3 py-1.5 rounded hover:bg-gray-50 transition-colors"
                                             >
                                                 <PenSquare className="w-4 h-4 text-gray-600" />

@@ -29,7 +29,7 @@ export default function AdminLogin() {
 
       if (res.ok) {
         // Redirect to admin dashboard
-        router.push('/admin/Blogs');
+        router.push('/admin/blogs');
         router.refresh();
       } else {
         setError(data.message || 'Login failed');

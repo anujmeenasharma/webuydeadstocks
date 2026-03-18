@@ -120,7 +120,7 @@ export default function UploadBlogPage() {
 
             setSuccess(true);
             setTimeout(() => {
-                router.push("/admin/Blogs");
+                router.push("/admin/blogs");
             }, 1000);
         } catch (err) {
             setError(err.message);
