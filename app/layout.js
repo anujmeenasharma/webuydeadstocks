@@ -14,10 +14,6 @@ const montserrat = Montserrat({
 
 export const metadata = {
   metadataBase: new URL("https://webuydeadstocks.com"),
-  title: {
-    template: "We Buy Dead Stocks | %s",
-    default: "We Buy Dead Stocks",
-  },
   description: "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region.",
   robots: {
     index: true,

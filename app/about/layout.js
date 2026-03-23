@@ -1,5 +1,5 @@
 export const metadata = {
-    title: "About Us",
+    title: "About WeBuy Dead Stocks | UAE Inventory Buyers",
     description: "Learn more about We Buy Dead Stocks and our experience in inventory liquidation.",
 };
 

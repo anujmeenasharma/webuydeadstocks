@@ -93,12 +93,12 @@ const Services = () => {
                             We purchase a wide range of used and unused surplus, overstock or dead inventory and scrap from multiple industries, including manufacturing, construction, IT and retail. Discover the stocks we love.
                         </p>
                     </div>
-                    <button className="flex items-center gap-3 border border-black px-6 py-4 text-sm font-semibold uppercase tracking-widest hover:bg-black hover:text-white transition-colors min-w-max cursor-pointer">
+                    <Link href="/services" className="flex items-center gap-3 border border-black px-6 py-4 text-sm font-semibold uppercase tracking-widest hover:bg-black hover:text-white transition-colors min-w-max cursor-pointer">
                         LEARN MORE
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-[280px] md:auto-rows-[320px]">

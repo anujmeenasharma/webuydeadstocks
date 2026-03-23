@@ -108,7 +108,7 @@ const Footer = () => {
 
         <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col items-center justify-center">
           <p className="text-gray-400 text-sm text-center">
-            © 2025 We Buy Dead Stocks Dubai,UAE. All Right Reserved by WeBuyDeadStock
+            © 2025 We Buy Dead Stocks Dubai,UAE. All Rights Reserved by WeBuyDeadStock
           </p>
         </div>
       </div>
