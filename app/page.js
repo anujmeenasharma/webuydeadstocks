@@ -8,6 +8,7 @@ import OurProcess from "@/components/pages/Home/OurProcess";
 import Recycling from "@/components/pages/Home/Recycling";
 import MapSection from "@/components/pages/Home/MapSection";
 import ScrollMaps from "@/components/pages/Home/ScrollMaps";
+import LenisResizer from "@/components/LenisResizer";
 
 export const metadata = {
   title: {
@@ -145,6 +146,7 @@ const page = () => {
       })
     }}
   />
+  <LenisResizer />
     </div>
   )
 }
