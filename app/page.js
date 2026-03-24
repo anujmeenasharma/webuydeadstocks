@@ -95,7 +95,10 @@ const page = () => {
             "description": "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region.",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://webuydeadstocks.com/services/{search_term_string}",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://webuydeadstocks.com/services/{search_term_string}"
+              },
               "query-input": "required name=search_term_string"
             }
           })
