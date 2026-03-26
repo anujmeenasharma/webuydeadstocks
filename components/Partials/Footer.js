@@ -2,7 +2,13 @@ import Link from "next/link";
 import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 
-const Footer = () => {
+const Footer = ({ lang }) => {
+  const getHref = (path) => {
+    if (lang === "ar") {
+      return path === "/" ? "/arabic" : `/arabic${path}`;
+    }
+    return path;
+  };
   return (
     <footer className="relative bg-black text-white pt-16 pb-8 border-t border-gray-900 overflow-hidden">
       <div
@@ -39,15 +45,15 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1 lg:col-span-2">
-            <Link href="/services" className="text-xl font-bold">Services</Link>
+            <Link href={getHref("/services")} className="text-xl font-bold">Services</Link>
             <ul className="flex flex-col gap-4 pt-6">
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors text-base">
+                <Link href={getHref("/services")} className="text-gray-300 hover:text-white transition-colors text-base">
                   What we buy
                 </Link>
               </li>
               <li>
-                <Link href="/Blogs" className="text-gray-300 hover:text-white transition-colors text-base">
+                <Link href={getHref("/Blogs")} className="text-gray-300 hover:text-white transition-colors text-base">
                   Blog
                 </Link>
               </li>
@@ -55,7 +61,7 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1 lg:col-span-4">
-            <Link href="/contact" className="text-xl font-bold">Contact Us</Link>
+            <Link href={getHref("/contact")} className="text-xl font-bold">Contact Us</Link>
             <ul className="flex flex-col gap-4 pt-6">
               <li className="flex items-start gap-4">
                 <Mail className="w-5 h-5 text-gray-300 mt-0.5" strokeWidth={1.5} />
@@ -79,25 +85,25 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1 lg:col-span-2">
-            <Link href="/about" className="text-xl font-bold">About Us</Link>
+            <Link href={getHref("/about")} className="text-xl font-bold">About Us</Link>
             <ul className="flex flex-col gap-4 pt-6">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-base">
+                <Link href={getHref("/about")} className="text-gray-300 hover:text-white transition-colors text-base">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-base">
+                <Link href={getHref("/contact")} className="text-gray-300 hover:text-white transition-colors text-base">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors text-base">
+                <Link href={getHref("/privacy")} className="text-gray-300 hover:text-white transition-colors text-base">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors text-base">
+                <Link href={getHref("/terms")} className="text-gray-300 hover:text-white transition-colors text-base">
                   Terms & Condition
                 </Link>
               </li>

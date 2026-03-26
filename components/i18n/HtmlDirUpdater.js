@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 /**
  * This component updates <html lang="..."> and <html dir="..."> on the client side.
@@ -7,6 +7,8 @@ import { useEffect } from "react";
  * actual lang/dir based on the URL's [lang] segment.
  */
 export default function HtmlDirUpdater({ lang }) {
+  const prevLangRef = useRef(lang);
+
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
@@ -23,6 +25,11 @@ export default function HtmlDirUpdater({ lang }) {
       select.value = gLang;
       select.dispatchEvent(new Event("change"));
     }
+
+    if (prevLangRef.current !== lang) {
+      window.location.reload();
+    }
+    prevLangRef.current = lang;
   }, [lang]);
 
   return null;

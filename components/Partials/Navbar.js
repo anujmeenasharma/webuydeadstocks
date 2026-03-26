@@ -13,6 +13,7 @@ const Navbar = () => {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const container = useRef(null);
   const pathname = usePathname();
+  const isArabic = pathname === "/arabic" || pathname.startsWith("/arabic/");
 
   const handleSwitchLanguage = (lang) => {
     // 1. Set our custom routing cookie
@@ -66,19 +67,26 @@ const Navbar = () => {
     }
   }, { scope: container, dependencies: [isSidebarOpen] });
 
+  const getHref = (path) => {
+    if (isArabic) {
+      return path === "/" ? "/arabic" : `/arabic${path}`;
+    }
+    return path;
+  };
+
   const navLinks = [
-    { label: "HOME", href: "/" },
-    { label: "SERVICES", href: "/services" },
-    { label: "ABOUT US", href: "/about" },
-    { label: "BLOGS", href: "/Blogs" },
+    { label: "HOME", href: getHref("/") },
+    { label: "SERVICES", href: getHref("/services") },
+    { label: "ABOUT US", href: getHref("/about") },
+    { label: "BLOGS", href: getHref("/Blogs") },
     { label: "BOOK A CALL", href: "https://calendly.com/webuydeadstocks-info/30min?primary_color=80d741" },
-    { label: "CONTACT US", href: "/contact" },
+    { label: "CONTACT US", href: getHref("/contact") },
   ];
 
   return (
     <>
       <nav className="w-full flex items-center justify-between fixed top-0 z-40" style={{ padding: 'clamp(12px, 1.1vw, 16px) clamp(16px, 1.6vw, 23px)', paddingLeft: 'clamp(20px, 2vw, 40px)' }}>
-        <Link href="/" className="flex items-center" style={{ gap: 'clamp(8px, 0.8vw, 12px)' }}>
+        <Link href={getHref("/")} className="flex items-center" style={{ gap: 'clamp(8px, 0.8vw, 12px)' }}>
           <Image src="/logo.png" alt="Logo" width={150} height={150} style={{ width: 'clamp(90px, 10.4vw, 150px)', height: 'auto' }} />
         </Link>
 
@@ -194,12 +202,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center" style={{ gap: 'clamp(16px, 1.2vw, 24px)' }}>
-            <Link href="/career" className="overflow-hidden">
+            <Link href={getHref("/career")} className="overflow-hidden">
               <div className="nav-link-item translate-y-full text-white tracking-widest uppercase hover:text-gray-200" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>
                 CAREERS
               </div>
             </Link>
-            <Link href="/environment" className="overflow-hidden">
+            <Link href={getHref("/environment")} className="overflow-hidden">
               <div className="nav-link-item translate-y-full text-white tracking-widest uppercase hover:text-gray-200" style={{ fontSize: 'min(0.9vw, 14px)' }}>
                 ENVIRONMENT IMPACT
               </div>
