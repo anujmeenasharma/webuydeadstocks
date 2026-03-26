@@ -65,6 +65,28 @@ export default async function LangLayout({ children, params }) {
             }),
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var domain = window.location.hostname;
+                var gLang = "${lang === 'ar' ? 'ar' : 'en'}";
+                if (gLang === 'en') {
+                  document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+                  document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + domain;
+                  document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                  document.cookie = "googtrans=/en/en; path=/; domain=" + domain;
+                  document.cookie = "googtrans=/en/en; path=/; domain=." + domain;
+                  document.cookie = "googtrans=/en/en; path=/;";
+                } else {
+                  document.cookie = "googtrans=/en/ar; path=/; domain=" + domain;
+                  document.cookie = "googtrans=/en/ar; path=/; domain=." + domain;
+                  document.cookie = "googtrans=/en/ar; path=/;";
+                }
+              })();
+            `
+          }}
+        />
       </head>
       <body className={montserrat.variable}>
         <noscript>
