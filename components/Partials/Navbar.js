@@ -8,13 +8,37 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 
-import { switchLanguage } from "@/components/GoogleTranslate";
-
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const container = useRef(null);
   const pathname = usePathname();
+
+  const handleSwitchLanguage = (lang) => {
+    // 1. Set our custom routing cookie
+    document.cookie = `NEXT_LOCALE=${lang}; path=/; max-age=31536000`;
+
+    // 2. Set the Google Translate cookie so it auto-translates on the next load
+    const domain = window.location.hostname;
+    document.cookie = `googtrans=/en/${lang}; path=/; domain=${domain}`;
+    document.cookie = `googtrans=/en/${lang}; path=/; domain=.${domain}`;
+
+    let newPath;
+    if (lang === "ar") {
+      if (pathname === "/arabic" || pathname.startsWith("/arabic/")) {
+        newPath = pathname;
+      } else {
+        newPath = pathname === "/" ? "/arabic" : `/arabic${pathname}`;
+      }
+    } else {
+      newPath = pathname.replace(/^\/arabic/, "") || "/";
+    }
+
+
+
+    // Hard navigation to ensure RTL layout refresh and middleware cookie catching
+    window.location.href = newPath;
+  };
 
   if (pathname?.startsWith("/admin")) {
     return null;
@@ -75,14 +99,14 @@ const Navbar = () => {
                 style={{ marginTop: 'min(0.3vw, 4px)', width: 'min(8.3vw, 120px)', paddingBlock: 'min(0.3vw, 6px)' }}
               >
                 <button
-                  onClick={() => { switchLanguage('en'); setIsLangOpen(false); }}
+                  onClick={() => { handleSwitchLanguage('en'); setIsLangOpen(false); }}
                   className="text-center text-[#333333] font-medium hover:bg-gray-50 hover:text-[#84CC16] transition-colors"
                   style={{ padding: 'min(0.5vw, 8px) min(1vw, 16px)', fontSize: 'min(1.04vw, 15px)' }}
                 >
                   English
                 </button>
                 <button
-                  onClick={() => { switchLanguage('ar'); setIsLangOpen(false); }}
+                  onClick={() => { handleSwitchLanguage('ar'); setIsLangOpen(false); }}
                   className="text-center text-[#333333] font-medium hover:bg-gray-50 hover:text-[#84CC16] transition-colors"
                   style={{ padding: 'min(0.5vw, 8px) min(1vw, 16px)', fontSize: 'min(1.04vw, 15px)' }}
                 >
@@ -156,7 +180,7 @@ const Navbar = () => {
         <div className="flex flex-col items-end relative z-10" style={{ gap: 'clamp(12px, 0.8vw, 16px)', padding: 'clamp(24px, 1.6vw, 48px) clamp(24px, 2.5vw, 48px)' }}>
           <div className="flex items-center" style={{ gap: 'clamp(16px, 1.2vw, 24px)', marginBottom: 'clamp(4px, 0.4vw, 8px)' }}>
             <div className="overflow-hidden">
-              <button onClick={() => { switchLanguage('en'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>
+              <button onClick={() => { handleSwitchLanguage('en'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>
                 ENGLISH
               </button>
             </div>
@@ -164,7 +188,7 @@ const Navbar = () => {
               <span className="nav-link-item translate-y-full text-[#84CC16]" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>/</span>
             </div>
             <div className="overflow-hidden">
-              <button onClick={() => { switchLanguage('ar'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>
+              <button onClick={() => { handleSwitchLanguage('ar'); toggleSidebar(); }} className="nav-link-item translate-y-full text-[#84CC16] font-bold tracking-widest uppercase hover:text-white transition-colors" style={{ fontSize: 'clamp(12px, 0.9vw, 14px)' }}>
                 العربية
               </button>
             </div>

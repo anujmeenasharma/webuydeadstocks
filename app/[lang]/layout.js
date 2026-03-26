@@ -1,9 +1,10 @@
 import ClientLayout from "./clientLayout";
 import Navbar from "@/components/Partials/Navbar";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
 import Footer from "@/components/Partials/Footer";
 import GoogleTranslate from "@/components/GoogleTranslate";
+import HtmlDirUpdater from "@/components/i18n/HtmlDirUpdater";
+import { Montserrat } from "next/font/google";
+import "../globals.css";
 import Script from "next/script";
 
 const montserrat = Montserrat({
@@ -15,15 +16,18 @@ const montserrat = Montserrat({
 export const metadata = {
   metadataBase: new URL("https://webuydeadstocks.com"),
   description: "We Buy Dead Stocks is a leading dead stock buyer in the UAE and GCC region.",
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({ children }) {
+// This is the ROOT layout for all [lang] routes.
+// Next.js 14+ allows a dynamic segment to be the root layout (no app/layout.js needed).
+export default async function LangLayout({ children, params }) {
+  const resolvedParams = await params;
+  const lang = resolvedParams?.lang || "en";
+  const dir = lang === "ar" ? "rtl" : "ltr";
+
   return (
-    <html lang="en">
+    <html lang={lang} dir={dir}>
       <head>
         <Script
           id="fb-pixel"
@@ -50,32 +54,31 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "We Buy Dead Stocks",
-              "url": "https://webuydeadstocks.com",
-              "logo": "https://webuydeadstocks.com/images/logo.png",
-              "sameAs": [
+              name: "We Buy Dead Stocks",
+              url: "https://webuydeadstocks.com",
+              logo: "https://webuydeadstocks.com/images/logo.png",
+              sameAs: [
                 "https://www.facebook.com/webuydeadstocks/",
                 "https://www.instagram.com/webuydeadstocks",
-                "https://www.linkedin.com/company/chaudary-anwar-tr.-co-llc/"
-              ]
-            })
+                "https://www.linkedin.com/company/chaudary-anwar-tr.-co-llc/",
+              ],
+            }),
           }}
         />
       </head>
       <body className={montserrat.variable}>
         <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
+          <img height="1" width="1" style={{ display: "none" }} alt=""
             src="https://www.facebook.com/tr?id=1443902503720485&ev=PageView&noscript=1"
           />
         </noscript>
+        {/* HtmlDirUpdater keeps lang/dir in sync on client-side navigation */}
+        <HtmlDirUpdater lang={lang} />
         <ClientLayout>
           <GoogleTranslate />
-          <Navbar />
+          <Navbar lang={lang} />
           {children}
-          <Footer />
+          <Footer lang={lang} />
         </ClientLayout>
       </body>
     </html>

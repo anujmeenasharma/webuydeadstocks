@@ -30,17 +30,15 @@ export default function GoogleTranslate() {
 }
 
 export const switchLanguage = (lang) => {
-    // lang should be 'en' or 'ar'
-    // When switching back to English from Arabic, Google Translate uses 'en' or clears it
     const select = document.querySelector(".goog-te-combo");
     if (select) {
         select.value = lang;
         select.dispatchEvent(new Event("change"));
     } else {
-        // If the widget is not fully loaded or select doesn't exist, we fallback to cookie approach
+        // Set cookie but do NOT reload — native i18n routing handles language switching
         const domain = window.location.hostname;
         document.cookie = `googtrans=/en/${lang}; path=/; domain=${domain}`;
         document.cookie = `googtrans=/en/${lang}; path=/; domain=.${domain}`;
-        window.location.reload();
+        // No window.location.reload() here — that was causing infinite reloads
     }
 };
