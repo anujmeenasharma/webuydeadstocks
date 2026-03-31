@@ -31,6 +31,10 @@ const BlogSchema = new mongoose.Schema(
             type: Date,
             default: Date.now,
         },
+        redirectUrl: {
+            type: String,
+            default: "",
+        },
     },
     {
         timestamps: true,

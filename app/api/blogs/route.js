@@ -31,7 +31,8 @@ export async function GET(request) {
                 publishedAt: blog.publishedAt,
                 image: blog.image,
                 contentHtml: blog.contentHtml,
-                seo: blog.seo
+                seo: blog.seo,
+                redirectUrl: blog.redirectUrl || ""
             }
         }));
 
@@ -67,6 +68,7 @@ export async function POST(request) {
             contentHtml: body.contentHtml,
             image: body.image,
             seo: body.seo,
+            redirectUrl: body.redirectUrl || "",
             publishedAt: body.publishedAt || new Date()
         });
 

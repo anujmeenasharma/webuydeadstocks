@@ -23,7 +23,8 @@ export async function GET(request, { params }) {
             publishedAt: blog.publishedAt,
             image: blog.image,
             contentHtml: blog.contentHtml,
-            seo: blog.seo
+            seo: blog.seo,
+            redirectUrl: blog.redirectUrl || ""
         };
 
         return NextResponse.json(formattedBlog, { status: 200 });

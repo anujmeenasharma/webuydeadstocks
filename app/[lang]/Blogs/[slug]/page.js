@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import connectToDatabase from '@/lib/mongodb';
 import Blog from '@/models/Blog';
 
@@ -15,7 +16,8 @@ async function fetchLocalArticle(slug) {
         publishedAt: blog.publishedAt,
         image: blog.image,
         contentHtml: blog.contentHtml,
-        seo: blog.seo
+        seo: blog.seo,
+        redirectUrl: blog.redirectUrl || ""
     };
 }
 
@@ -36,6 +38,10 @@ export async function generateMetadata({ params }) {
 export default async function BlogPostPage({ params }) {
     const { slug } = await params;
     const article = await fetchLocalArticle(slug);
+
+    if (article && article.redirectUrl && article.redirectUrl.trim() !== "") {
+        redirect(article.redirectUrl.trim());
+    }
 
     if (!article) {
         return (

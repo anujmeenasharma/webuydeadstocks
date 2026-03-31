@@ -27,6 +27,7 @@ export default function UploadBlogPage() {
         imageAlt: "",
         seoTitle: "",
         seoDescription: "",
+        redirectUrl: "",
     });
 
     const handleChange = (e) => {
@@ -103,7 +104,8 @@ export default function UploadBlogPage() {
                 seo: {
                     title: formData.seoTitle,
                     description: formData.seoDescription,
-                }
+                },
+                redirectUrl: formData.redirectUrl,
             };
 
             const response = await fetch("/api/blogs", {
@@ -266,6 +268,18 @@ export default function UploadBlogPage() {
                                         className="w-full border border-gray-300 rounded-r p-2 focus:ring-2 focus:ring-[#008060] outline-none"
                                     />
                                 </div>
+                            </div>
+                            <div className="pt-2">
+                                <label className="block text-sm font-medium mb-1">Redirect this blog to URL (Optional)</label>
+                                <input
+                                    type="url"
+                                    name="redirectUrl"
+                                    value={formData.redirectUrl}
+                                    onChange={handleChange}
+                                    placeholder="https://example.com"
+                                    className="w-full border border-gray-300 rounded p-2 focus:ring-2 focus:ring-[#008060] outline-none"
+                                />
+                                <p className="text-xs text-gray-500 mt-1">If set, users visiting this blog will be redirected to this URL.</p>
                             </div>
                         </div>
                     </div>
