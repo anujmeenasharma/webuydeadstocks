@@ -27,7 +27,7 @@ const Pricing = () => {
             },
         });
 
-        // "first" phase
+
         price.addLabel("first")
             .from(".percentage-animation", {
                 x: isDesktop ? "50%" : "0%",
@@ -50,10 +50,10 @@ const Pricing = () => {
                 "first+=0.7"
             );
 
-        // "Percentagesecond" phase
+
         price.addLabel("Percentagesecond", "first+=2")
             .to(".percentage-anim-text", {
-                color: "#0b7a11", // green string
+                color: "#0b7a11",
                 fontVariationSettings: "'wght' 700",
                 ease: "power2.out",
                 duration: 1.5
@@ -69,7 +69,7 @@ const Pricing = () => {
                 duration: 1.5
             }, "Percentagesecond")
             .to(".subtitle-2, .percentage-symbol", {
-                color: "#4b4b4b", // equivalent to #000 in legacy or close to it
+                color: "#4b4b4b",
                 ease: "power2.out",
                 duration: 1.5
             }, "Percentagesecond")

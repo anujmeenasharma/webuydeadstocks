@@ -6,9 +6,9 @@ export async function GET(request) {
     try {
         await connectToDatabase();
 
-        // Handle pagination cursor (optional for later, currently we will fetch all or page base)
+
         const { searchParams } = new URL(request.url);
-        const cursor = searchParams.get("cursor"); // Using this generic structure to match Shopify's need
+        const cursor = searchParams.get("cursor");
         const search = searchParams.get("search") || "";
 
         const limit = 20;
@@ -17,11 +17,11 @@ export async function GET(request) {
             query.title = { $regex: search, $options: "i" };
         }
 
-        // Let's just do a simple fetch all for now, to match the Shopify layout. 
-        // Real cursor-based pagination can be added based on `_id` > cursor if needed.
+
+
         const blogs = await Blog.find(query).sort({ publishedAt: -1 });
 
-        // Format to match Shopify's GraphQL structure!
+
         const edges = blogs.map((blog) => ({
             node: {
                 id: blog._id.toString(),
@@ -39,7 +39,7 @@ export async function GET(request) {
         return NextResponse.json({
             edges,
             pageInfo: {
-                hasNextPage: false, // simplified for now
+                hasNextPage: false,
                 endCursor: null
             }
         }, { status: 200 });
@@ -55,7 +55,7 @@ export async function POST(request) {
         await connectToDatabase();
         const body = await request.json();
 
-        // Ensure handle is unique
+
         const existingBlog = await Blog.findOne({ handle: body.handle });
         if (existingBlog) {
             return NextResponse.json({ error: "A blog with this handle already exists" }, { status: 400 });

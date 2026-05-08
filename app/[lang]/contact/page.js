@@ -34,7 +34,7 @@ const ContactPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Reset states
+
         setSuccessMsg('');
         setGlobalError('');
         setErrors({});
@@ -43,7 +43,7 @@ const ContactPage = () => {
         const email = e.target.email.value.trim();
         const subject = e.target.subject.value.trim();
 
-        // Validation
+
         let isValid = true;
         const newErrors = {};
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -104,7 +104,7 @@ const ContactPage = () => {
     return (
         <>
             <div className="w-full min-h-screen flex flex-col md:flex-row border">
-                {/* Left Side: Map & Intro */}
+                
                 <div className="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center bg-white border-r border-gray-100">
                     <h1 className="text-5xl md:text-7xl font-light mb-6 text-black tracking-wide">
                         Let's get<br />in touch
@@ -125,10 +125,10 @@ const ContactPage = () => {
                     </div>
                 </div>
 
-                {/* Right Side: Form + Reach Out */}
+                
                 <div className="w-full md:w-1/2 flex flex-col">
 
-                    {/* Form Section */}
+                    
                     <div className="w-full bg-[#1a1a1a] p-8 md:p-16 lg:px-24 py-16 flex flex-col justify-center text-white min-h-[60vh] md:min-h-auto flex-grow">
                         <h2 className="text-4xl font-normal mb-12 text-white">Say Hello!</h2>
 
@@ -199,7 +199,7 @@ const ContactPage = () => {
                         </form>
                     </div>
 
-                    {/* Reach Out Section */}
+                    
                     <div className="w-full bg-white p-8 md:p-16 lg:px-24 py-16 flex flex-col justify-center">
                         <h3 className="text-4xl text-[#2d2d2d] mb-8 font-normal tracking-wide">
                             Reach out to us at

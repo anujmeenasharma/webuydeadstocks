@@ -9,14 +9,14 @@ import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Animate map countries to distinct colors and define their zoom coordinates
+
 const targetsToLightUp = [
-    { selector: ".OmapMap", color: "#8B5CF6", scale: 4.5, x: -180, y: 10 }, // Purple
-    { selector: ".QatarMap", color: "#3B82F6", scale: 5.5, x: -100, y: 35 }, // Light Blue
-    { selector: ".BahraniMap", color: "#9333EA", scale: 6, x: -100, y: 55 }, // Deep Purple
-    { selector: ".KuwaitMap", color: "#EC4899", scale: 5.5, x: -40, y: 80 }, // Pink
-    { selector: ".SaudiMap", color: "#65C747", scale: 3.5, x: -20, y: -20 }, // Green
-    { selector: ".UaeMap", color: "#0EA5E9", scale: 4.5, x: -140, y: 35 }  // Blue
+    { selector: ".OmapMap", color: "#8B5CF6", scale: 4.5, x: -180, y: 10 },
+    { selector: ".QatarMap", color: "#3B82F6", scale: 5.5, x: -100, y: 35 },
+    { selector: ".BahraniMap", color: "#9333EA", scale: 6, x: -100, y: 55 },
+    { selector: ".KuwaitMap", color: "#EC4899", scale: 5.5, x: -40, y: 80 },
+    { selector: ".SaudiMap", color: "#65C747", scale: 3.5, x: -20, y: -20 },
+    { selector: ".UaeMap", color: "#0EA5E9", scale: 4.5, x: -140, y: 35 }
 ];
 
 const ScrollMaps = () => {
@@ -43,15 +43,15 @@ const ScrollMaps = () => {
     const closePopup = () => {
         gsap.to(popupRef.current, { autoAlpha: 0, duration: 0.3, pointerEvents: 'none' });
         if (containerRef.current) {
-            // Restore map to normal
+
             targetsToLightUp.forEach(t => {
                 const nodes = containerRef.current.querySelectorAll(t.selector);
                 gsap.to(nodes, { fill: t.color, opacity: 1, duration: 0.3 });
             });
 
-            // Restore SVG transform back to timeline state
+
             const mapSvg = containerRef.current.querySelector('#mapSvg');
-            // We just clear our appended transform so ScrollTrigger takes over naturally again
+
             gsap.to(mapSvg, {
                 scale: 2.2,
                 xPercent: 0,
@@ -75,7 +75,7 @@ const ScrollMaps = () => {
 
         const mapSvg = containerRef.current.querySelector('#mapSvg');
 
-        // Splittexts for Line Mask
+
         const text1Split = new SplitType('.mapTextAnimation:nth-child(1) h4, .mapTextAnimation:nth-child(1) p', { types: 'lines', lineClass: 'split-line' });
         const text2Split = new SplitType('.mapTextAnimation:nth-child(2) h4, .mapTextAnimation:nth-child(2) p', { types: 'lines', lineClass: 'split-line' });
 
@@ -94,8 +94,8 @@ const ScrollMaps = () => {
         wrapLines(text1Split);
         wrapLines(text2Split);
 
-        // Initial Zoom in on UAE
-        // Using xPercent/yPercent instead of changing transformOrigin to avoid glitching
+
+
         gsap.set(mapSvg, {
             scale: 7,
             xPercent: -180,
@@ -120,40 +120,40 @@ const ScrollMaps = () => {
         targetsToLightUp.forEach(({ selector, color }) => {
             const nodes = containerRef.current.querySelectorAll(selector);
             if (nodes.length > 0) {
-                // Ensure nodes use their class or ID if missing
+
                 tl.to(nodes, { fill: color, duration: 0.5 }, "-=0.3");
             }
         });
 
-        // Fade in all country text labels together when colors fill
+
         tl.to('#KuwaitText, #BahrainText, #QatarText, #UaeText, #OmanText, #SaudiText', {
             autoAlpha: 1,
             duration: 0.5,
             ease: 'power2.inOut'
         }, '<');
 
-        // Add the closing fadeout at the end (+3000px onwards)
+
         tl.to(".scroll-maps-content", {
             scale: 0.8,
             opacity: 0,
-            duration: 2, // Relative duration to overlap with MapSection
+            duration: 2,
             ease: "power2.inOut"
         }, "+=2.8");
 
-        // The fade-in scaling up timeline for the map section aligned perfectly matching the fadeout
+
         tl.fromTo(".map-section-content",
             { scale: 2, autoAlpha: 0 },
             { scale: 1, autoAlpha: 1, duration: 1.5, ease: 'power2.inOut' },
-            "<" // Matches the start of the previous fadeout animation exactly
+            "<"
         )
-            // Transition straight into the right translation map over the remainder of timeline segment
+
             .to(".map-section-image", {
                 x: '-10vw',
                 ease: "none",
                 duration: 1.5
             }, ">");
 
-        // Attach event listeners
+
         const paths = containerRef.current.querySelectorAll('path[data-name]');
         const clickHandler = (e) => {
             const pathNode = e.currentTarget;
@@ -170,10 +170,10 @@ const ScrollMaps = () => {
             const x = targetData?.x || 0;
             const y = targetData?.y || 0;
 
-            // Zoom map to country
+
             const mapSvg = containerRef.current.querySelector('#mapSvg');
             gsap.to(mapSvg, {
-                scale: scale, // Absolute zooming
+                scale: scale,
                 xPercent: x,
                 yPercent: y,
                 duration: 0.8,
@@ -194,12 +194,12 @@ const ScrollMaps = () => {
             p.addEventListener('click', clickHandler);
             p.style.cursor = 'pointer';
 
-            // Add hover effect
+
             p.addEventListener('mouseenter', () => {
                 gsap.to(p, { fill: '#F2C144', duration: 0.2 });
             });
             p.addEventListener('mouseleave', () => {
-                // Need to match current color from timeline. Just clearing isn't perfect if timeline moved
+
                 gsap.to(p, { clearProps: 'fill', duration: 0.2 });
             });
         });
@@ -476,7 +476,7 @@ const ScrollMaps = () => {
                 </div>
             </div>
 
-            {/* Injected MapSection Overlap Content */}
+            
             <div className="map-section-content w-full h-full absolute inset-0 pointer-events-none flex items-center justify-center" style={{ opacity: 0, visibility: 'hidden', transform: 'scale(2)', zIndex: 10 }}>
                 <img src="/images/Maps.svg" alt="" className='map-section-image w-full h-full object-cover scale-150 -translate-y-80 translate-x-180 absolute inset-0' />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>

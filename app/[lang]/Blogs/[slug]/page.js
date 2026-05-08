@@ -71,7 +71,7 @@ export default async function BlogPostPage({ params }) {
 
     return (
         <div className="min-h-screen flex flex-col overflow-x-hidden">
-            {/* Hero Section with Background Image */}
+            
             <div className="relative h-[50vh] w-full">
                 {article.image && (
                     <Image
@@ -83,10 +83,10 @@ export default async function BlogPostPage({ params }) {
                         unoptimized={article.image.url?.startsWith('/uploads/')}
                     />
                 )}
-                {/* Dark overlay */}
+                
                 <div className="absolute inset-0 bg-black/60" />
 
-                {/* Content overlay */}
+                
                 <div className="relative h-full w-full px-6 sm:px-8 lg:px-12 flex flex-col justify-center">
                     <Link
                         href="/"
@@ -108,15 +108,15 @@ export default async function BlogPostPage({ params }) {
                 </div>
             </div>
 
-            {/* White Content Section */}
+            
             <div className="bg-white">
                 <div className="w-full lg:w-[100%] px-6 sm:px-8 lg:px-12 py-16">
-                    {/* Published Date */}
+                    
                     <div className="text-gray-600 text-base mb-12">
                         Published on : {formattedDate}
                     </div>
 
-                    {/* Article Content */}
+                    
                     <div
                         className="prose prose-lg max-w-none
                         prose-headings:text-gray-900 prose-headings:font-bold prose-headings:text-3xl prose-headings:mb-6 prose-headings:mt-12

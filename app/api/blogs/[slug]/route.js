@@ -14,7 +14,7 @@ export async function GET(request, { params }) {
             return NextResponse.json({ error: "Blog not found" }, { status: 404 });
         }
 
-        // Format it similarly to the Shopify single article format
+
         const formattedBlog = {
             id: blog._id.toString(),
             title: blog.title,
@@ -41,7 +41,7 @@ export async function PUT(request, { params }) {
         const { slug } = await params;
         const body = await request.json();
 
-        // Check if handle is being updated and if it conflicts
+
         if (body.handle && body.handle !== slug) {
             const existingBlog = await Blog.findOne({ handle: body.handle });
             if (existingBlog) {

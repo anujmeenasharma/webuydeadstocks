@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function GoogleTranslate() {
     useEffect(() => {
-        // Only load if it's not already there
+
         if (!window.googleTranslateElementInit) {
             window.googleTranslateElementInit = () => {
                 new window.google.translate.TranslateElement(
@@ -35,10 +35,10 @@ export const switchLanguage = (lang) => {
         select.value = lang;
         select.dispatchEvent(new Event("change"));
     } else {
-        // Set cookie but do NOT reload — native i18n routing handles language switching
+
         const domain = window.location.hostname;
         document.cookie = `googtrans=/en/${lang}; path=/; domain=${domain}`;
         document.cookie = `googtrans=/en/${lang}; path=/; domain=.${domain}`;
-        // No window.location.reload() here — that was causing infinite reloads
+
     }
 };

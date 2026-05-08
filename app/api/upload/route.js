@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import { writeFile, mkdir } from "fs/promises";
 import path from "path";
 
-// Native Next.js 13+ App router file upload without needing external multer middleware.
-// This is the recommended approach for modern Next.js.
+
+
 export async function POST(request) {
     try {
         const data = await request.formData();
@@ -16,7 +16,7 @@ export async function POST(request) {
         const bytes = await file.arrayBuffer();
         const buffer = Buffer.from(bytes);
 
-        // Sanitize filename to prevent malicious directory traversal
+
         const pureName = file.name.replace(/[^a-zA-Z0-9.\-_]/g, '');
         const filename = `${Date.now()}-${pureName}`;
         
@@ -27,7 +27,7 @@ export async function POST(request) {
         
         await writeFile(filepath, buffer);
 
-        // Return the path that the frontend can use to render the image
+
         return NextResponse.json({ 
             message: "File uploaded successfully", 
             url: `/uploads/${filename}` 

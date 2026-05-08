@@ -99,7 +99,7 @@ export default function EditBlogPage() {
         try {
             let uploadedImageUrl = formData.imageUrl;
 
-            // Upload image first if a NEW one is selected
+
             if (formData.imageFile) {
                 const imgData = new FormData();
                 imgData.append("file", formData.imageFile);
@@ -168,7 +168,7 @@ export default function EditBlogPage() {
 
     return (
         <div className="min-h-screen bg-[#f4f6f8] text-[#202223] font-sans pb-20">
-            {/* Header */}
+            
             <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
                 <div className="flex items-center gap-4">
                     <Link href="/admin/blogs" className="p-2 hover:bg-gray-100 rounded-md transition duration-150">
@@ -188,10 +188,10 @@ export default function EditBlogPage() {
 
             <main className="max-w-5xl mx-auto px-6 mt-8 flex flex-col lg:flex-row gap-6">
 
-                {/* Main Content Column */}
+                
                 <div className="flex-1 space-y-6">
 
-                    {/* Title and Content Card */}
+                    
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
                         <div className="space-y-4">
                             <div>
@@ -231,7 +231,7 @@ export default function EditBlogPage() {
                         </div>
                     </div>
 
-                    {/* Excerpt Card */}
+                    
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
                         <h2 className="text-lg font-medium mb-4">Excerpt</h2>
                         <div className="space-y-4">
@@ -245,7 +245,7 @@ export default function EditBlogPage() {
                         </div>
                     </div>
 
-                    {/* SEO Card */}
+                    
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
                         <div className="flex justify-between items-center mb-4">
                             <h2 className="text-lg font-medium">Search engine listing preview</h2>
@@ -302,10 +302,10 @@ export default function EditBlogPage() {
                     </div>
                 </div>
 
-                {/* Sidebar Column */}
+                
                 <div className="w-full lg:w-80 flex-shrink-0 space-y-6">
 
-                    {/* Featured Image */}
+                    
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
                         <h2 className="text-lg font-medium mb-4">Featured image</h2>
                         <div className="space-y-4">
@@ -340,7 +340,7 @@ export default function EditBlogPage() {
 
             </main>
 
-            {/* Notifications */}
+            
             {error && (
                 <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-6 py-3 rounded-lg shadow-lg z-50">
                     {error}

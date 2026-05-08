@@ -28,7 +28,7 @@ export default function AdminLogin() {
       const data = await res.json();
 
       if (res.ok) {
-        // Redirect to admin dashboard
+
         router.push('/admin/blogs');
         router.refresh();
       } else {

@@ -19,18 +19,18 @@ export default function LanguageSwitcher() {
   const toggleLanguage = () => {
     const newLang = currentLang === "en" ? "ar" : "en";
     
-    // Set cookie so proxy remembers preference
-    document.cookie = `NEXT_LOCALE=${newLang}; path=/; max-age=31536000`; // 1 year expiry
 
-    // Calculate new path based on our clean URL structure
+    document.cookie = `NEXT_LOCALE=${newLang}; path=/; max-age=31536000`;
+
+
     let newPath;
     if (newLang === "ar") {
-      // English -> Arabic
-      // Prepend /arabic to the current path
+
+
       newPath = pathname === "/" ? "/arabic" : `/arabic${pathname}`;
     } else {
-      // Arabic -> English
-      // Remove /arabic from the path
+
+
       newPath = pathname.replace(/^\/arabic/, "") || "/";
     }
 

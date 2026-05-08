@@ -10,7 +10,7 @@ export const metadata = {
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header Section */}
+      
       <div className="bg-black h-[40vh] flex items-center text-white py-12 px-10 sm:px-10 lg:px-20">
         <div className="w-full mx-auto">
           <Link href="/" className="inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors mb-8">
@@ -23,9 +23,9 @@ export default function Privacy() {
         </div>
       </div>
 
-      {/* Content Section */}
+      
       <div className="lg:w-[70%] px-10 sm:px-10 lg:px-20 py-12 sm:py-16">
-        {/* Effective Date */}
+        
         <div className="mb-8 space-y-1">
           <p className="text-gray-800 text-base sm:text-lg">
             Effective Date : February 22, 2025
@@ -35,14 +35,14 @@ export default function Privacy() {
           </p>
         </div>
 
-        {/* Introduction */}
+        
         <p className="text-gray-700 text-base sm:text-lg mb-12 leading-relaxed">
           We Buy Dead Stocks values your privacy and is committed to protecting your personal
           information. This Privacy Policy outlines how we collect, use, and protect your data when you
           visit our website, www.webuydeadstocks.com.
         </p>
 
-        {/* Section 1 */}
+        
         <section className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
             1. Information We Collect
@@ -60,7 +60,7 @@ export default function Privacy() {
           </ul>
         </section>
 
-        {/* Section 2 */}
+        
         <section className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
             2. How We Use Your Information
@@ -84,7 +84,7 @@ export default function Privacy() {
           </ul>
         </section>
 
-        {/* Section 3 */}
+        
         <section className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
             3. Sharing Your Information
@@ -99,7 +99,7 @@ export default function Privacy() {
           </ul>
         </section>
 
-        {/* Section 4 */}
+        
         <section className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
             4. Cookies & Tracking
@@ -110,7 +110,7 @@ export default function Privacy() {
           </p>
         </section>
 
-        {/* Section 5 */}
+        
         <section className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
             5. Data Security
@@ -121,7 +121,7 @@ export default function Privacy() {
           </p>
         </section>
 
-        {/* Section 6 */}
+        
         <section className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
             6. Your Rights
@@ -132,7 +132,7 @@ export default function Privacy() {
           </p>
         </section>
 
-        {/* Section 7 */}
+        
         <section className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
             7. Changes to This Policy
@@ -143,7 +143,7 @@ export default function Privacy() {
           </p>
         </section>
 
-        {/* Section 8 */}
+        
         <section className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
             8. Contact Us

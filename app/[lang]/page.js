@@ -105,7 +105,7 @@ const page = () => {
         }}
       />
 
-  {/* LOCAL BUSINESS SCHEMA */}
+  
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{

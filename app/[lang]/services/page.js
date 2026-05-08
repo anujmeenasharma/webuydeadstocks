@@ -20,7 +20,7 @@ export default function Services() {
       const pathname = window.location.pathname;
       if (pathname.startsWith('/services/')) {
         const slug = pathname.replace('/services/', '');
-        // Remove trailing slash if exists
+
         const cleanSlug = slug.replace(/\/$/, '');
         if (cleanSlug) {
           const matched = categories.find(c => generateSlug(c.name) === cleanSlug);
@@ -49,10 +49,10 @@ export default function Services() {
           className="object-cover object-[50%_4 0%]"
           priority
         />
-        {/* Dark overlay */}
+        
         <div className="absolute inset-0 bg-black/60" />
 
-        {/* Content overlay */}
+        
         <div className="relative h-full w-full px-6 sm:px-8 lg:px-12 flex flex-col justify-center">
           <Link
             href="/Blogs"
@@ -76,12 +76,12 @@ export default function Services() {
       <Category categories={categories} activeCategory={activeCategory} setActiveCategory={handleCategoryClick} />
       <section className="bg-white py-8 border-t border-b border-gray-200">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Title */}
+          
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
             OUR SERVICES
           </h2>
 
-          {/* Services Grid */}
+          
           <div className="flex flex-wrap gap-3">
             {services.map((service, index) => (
               <Link

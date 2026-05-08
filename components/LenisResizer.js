@@ -13,7 +13,7 @@ export default function LenisResizer() {
             lenis.resize();
         });
 
-        // Observe the main content area or body for height changes
+
         observer.observe(document.body);
 
         return () => {

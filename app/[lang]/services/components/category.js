@@ -7,7 +7,7 @@ export default function Category({ categories, activeCategory, setActiveCategory
   return (
     <div className="py-10 px-6 md:px-12 lg:px-20">
       <div className="flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8">
-        {/* Sidebar / Category List */}
+        
         <div className="md:col-span-4 xl:col-span-3">
           <div className="bg-white rounded-lg p-0 md:p-2 lg:p-4 overflow-x-auto md:overflow-visible">
             <div className="flex md:flex-col min-w-max md:min-w-0 gap-2 md:gap-0">
@@ -34,7 +34,7 @@ export default function Category({ categories, activeCategory, setActiveCategory
           </div>
         </div>
 
-        {/* Main Content */}
+        
         <div className="md:col-span-8 xl:col-span-9 mt-4 md:mt-0">
           <h3 className="text-2xl md:text-3xl mb-6 text-gray-800 font-semibold px-2 md:px-0">
             {activeCategory.name}

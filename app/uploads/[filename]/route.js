@@ -7,7 +7,7 @@ export async function GET(request, { params }) {
     try {
         const { filename } = await params;
         
-        // Prevent directory traversal attacks
+
         const safeFilename = path.basename(filename);
         const filepath = path.join(process.cwd(), "uploads", safeFilename);
 
@@ -17,7 +17,7 @@ export async function GET(request, { params }) {
 
         const buffer = await readFile(filepath);
         
-        // Determine content type
+
         let contentType = "image/jpeg";
         const ext = path.extname(safeFilename).toLowerCase();
         if (ext === ".png") contentType = "image/png";

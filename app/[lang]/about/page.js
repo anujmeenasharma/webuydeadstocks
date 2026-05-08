@@ -5,9 +5,9 @@ import Link from 'next/link';
 export default function AboutUs() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      
       <section className="relative h-[600px] md:h-[700px] bg-gradient-to-r from-gray-800 to-gray-600 overflow-hidden">
-        {/* Background Image Overlay */}
+        
         <div className="absolute inset-0">
           <img
             src="/images/back.webp"
@@ -17,17 +17,17 @@ export default function AboutUs() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
-        {/* Content */}
+        
         <div className="relative h-full w-full mx-auto px-6 sm:px-20 lg:px-20">
           <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Left Column */}
+            
             <div className="text-white">
               <h2 className="text-2xl sm:text-3xl max-w-lg mb-4 leading-tight">
                 21+ Years Of Turning Non-Moving Stock Into Instant Cash
               </h2>
             </div>
 
-            {/* Right Column */}
+            
             <div className="text-white">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
                 About Us
@@ -46,11 +46,11 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Trust Us Section */}
+      
       <section className="py-16 md:py-24 bg-white">
         <div className="w-full mx-auto px-6 sm:px-20 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Text */}
+            
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Trust Us, We're Experts At Dead Stock Liquidation
@@ -91,7 +91,7 @@ export default function AboutUs() {
               </p>
             </div>
 
-            {/* Right Column - Image */}
+            
             <div className="relative h-[300px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl mt-8 lg:mt-0">
               <img
                 src="/images/desc.webp"
@@ -103,9 +103,9 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Sustainability Section */}
+      
       <section className="relative py-32 md:py-40 overflow-hidden">
-        {/* Background Image */}
+        
         <div className="absolute inset-0">
           <img
             src="/images/OurCommit.webp"
@@ -115,7 +115,7 @@ export default function AboutUs() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         </div>
 
-        {/* Content */}
+        
         <div className="relative w-full mx-auto px-6 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -131,9 +131,9 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      
       <section className="relative py-24 md:py-32 overflow-hidden bg-black/90 px-6 sm:px-0">
-        {/* Content */}
+        
         <div className="relative text-center mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl text-white mb-8 leading-tight">
             Too Much Stock And Not Enough Space?
@@ -151,12 +151,12 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Features Section */}
+      
       <section className="py-16 sm:py-20 px-6 sm:px-20 md:py-28 bg-white">
         <div className="w-full mx-auto px-0 sm:px-6 lg:px-8">
-          {/* Features Grid */}
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-16">
-            {/* Feature 1 */}
+            
             <div className="text-center md:text-left">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full border-4 border-green-600 mb-6">
                 <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,7 +172,7 @@ export default function AboutUs() {
               </p>
             </div>
 
-            {/* Feature 2 */}
+            
             <div className="text-center md:text-left">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full border-4 border-green-600 mb-6">
                 <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,7 +189,7 @@ export default function AboutUs() {
               </p>
             </div>
 
-            {/* Feature 3 */}
+            
             <div className="text-center md:text-left">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full border-4 border-green-600 mb-6">
                 <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,7 +206,7 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* Contact Button */}
+          
           <div className="text-center">
             <Link
               href="/contact"

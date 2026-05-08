@@ -19,21 +19,21 @@ export default function ClientLayout({ children }) {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Reset scroll to top on route change
+
   useEffect(() => {
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "PageView");
     }
 
     const resetScroll = setTimeout(() => {
-      // Force scroll to top using both window and lenis
+
       window.scrollTo(0, 0);
       if (lenisRef.current?.lenis) {
         lenisRef.current.lenis.scrollTo(0, { immediate: true });
         lenisRef.current.lenis.resize();
         ScrollTrigger.refresh();
       }
-    }, 100); // Small delay to allow Next.js to fully swap DOM nodes
+    }, 100);
 
     return () => clearTimeout(resetScroll);
   }, [pathname]);

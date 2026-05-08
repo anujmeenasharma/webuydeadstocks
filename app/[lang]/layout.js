@@ -19,8 +19,8 @@ export const metadata = {
   robots: { index: true, follow: true },
 };
 
-// This is the ROOT layout for all [lang] routes.
-// Next.js 14+ allows a dynamic segment to be the root layout (no app/layout.js needed).
+
+
 export default async function LangLayout({ children, params }) {
   const resolvedParams = await params;
   const lang = resolvedParams?.lang || "en";
@@ -89,7 +89,7 @@ export default async function LangLayout({ children, params }) {
         />
       </head>
       <body className={montserrat.variable}>
-        {/* Google Tag Manager */}
+        
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -111,7 +111,7 @@ export default async function LangLayout({ children, params }) {
             src="https://www.facebook.com/tr?id=1443902503720485&ev=PageView&noscript=1"
           />
         </noscript>
-        {/* HtmlDirUpdater keeps lang/dir in sync on client-side navigation */}
+        
         <HtmlDirUpdater lang={lang} />
         <ClientLayout>
           <GoogleTranslate />

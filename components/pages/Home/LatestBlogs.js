@@ -17,7 +17,7 @@ const LatestBlogs = () => {
             setLoading(true);
             try {
                 const { edges } = await fetchLocalBlogs();
-                // Get the latest 3 blogs
+
                 setBlogs(edges.slice(0, 3));
             } catch (error) {
                 console.error("Failed to load blogs", error);

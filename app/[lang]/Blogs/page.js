@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowLeft, Search } from "lucide-react";
 import { useLenis } from "lenis/react";
 
-// Local fetch replacement for fetchBlogData
+
 const fetchLocalBlogs = async (cursor = null) => {
     const res = await fetch(`/api/blogs${cursor ? `?cursor=${cursor}` : ""}`);
     if (!res.ok) throw new Error("Failed to fetch blogs");
@@ -24,7 +24,7 @@ const BlogPage = () => {
 
     useEffect(() => {
         if (lenis) {
-            // slightly delay the resize to ensure DOM has updated with new images/content
+
             setTimeout(() => {
                 lenis.resize();
             }, 100);
@@ -64,7 +64,7 @@ const BlogPage = () => {
         }
     };
 
-    // Search Filter
+
     const filteredBlogs = blogs.filter((blog) => {
         const title = blog.node.title.toLowerCase();
         return title.includes(searchQuery.toLowerCase());

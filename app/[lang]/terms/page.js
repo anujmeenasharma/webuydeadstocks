@@ -10,7 +10,7 @@ export const metadata = {
 export default function Terms() {
     return (
         <div className="min-h-screen bg-white">
-            {/* Header Section */}
+            
             <div className="bg-black h-[40vh] flex items-center text-white py-12 px-10 sm:px-10 lg:px-20">
                 <div className="w-full mx-auto">
                     <Link href="/">
@@ -25,9 +25,9 @@ export default function Terms() {
                 </div>
             </div>
 
-            {/* Content Section */}
+            
             <div className="lg:w-[70%] px-10 sm:px-10 lg:px-20 py-12 sm:py-16">
-                {/* Effective Date */}
+                
                 <div className="mb-8 space-y-1">
                     <p className="text-gray-800 text-base sm:text-lg">
                         Effective Date : February 22, 2025
@@ -37,12 +37,12 @@ export default function Terms() {
                     </p>
                 </div>
 
-                {/* Introduction */}
+                
                 <p className="text-gray-700 text-base sm:text-lg mb-12 leading-relaxed">
                     By using We Buy Dead Stocks ("we," "our," or "us") and our services through www.webuydeadstocks.com (the "Site"), you ("you" or "User") agree to these Terms and Conditions.
                 </p>
 
-                {/* Section 1 */}
+                
                 <section className="mb-12">
                     <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
                         1. Services Provided
@@ -52,7 +52,7 @@ export default function Terms() {
                     </p>
                 </section>
 
-                {/* Section 2 */}
+                
                 <section className="mb-12">
                     <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
                         2. Transactions
@@ -70,7 +70,7 @@ export default function Terms() {
                     </ul>
                 </section>
 
-                {/* Section 3 */}
+                
                 <section className="mb-12">
                     <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
                         3. Intellectual Property
@@ -80,7 +80,7 @@ export default function Terms() {
                     </p>
                 </section>
 
-                {/* Section 4 */}
+                
                 <section className="mb-12">
                     <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
                         4. Limitation of Liability
@@ -90,7 +90,7 @@ export default function Terms() {
                     </p>
                 </section>
 
-                {/* Section 5 */}
+                
                 <section className="mb-12">
                     <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
                         5. Changes to Terms
@@ -100,7 +100,7 @@ export default function Terms() {
                     </p>
                 </section>
 
-                {/* Section 6 */}
+                
                 <section className="mb-12">
                     <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
                         6. Contact Us

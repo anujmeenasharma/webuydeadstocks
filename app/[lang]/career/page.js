@@ -19,10 +19,10 @@ export default function Career() {
           className="object-cover"
           priority
         />
-        {/* Dark overlay */}
+        
         <div className="absolute inset-0 bg-black/60" />
 
-        {/* Content overlay */}
+        
         <div className="relative h-full w-full px-6 sm:px-8 lg:px-12 flex flex-col justify-center">
           <Link
             href="/Blogs"
@@ -42,7 +42,7 @@ export default function Career() {
         </div>
       </div>
       <div className="min-h-screen bg-white px-6 py-16 sm:px-12 lg:px-24">
-        {/* Header Section */}
+        
         <div className="mx-auto">
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
             At We Buy Dead Stocks
@@ -55,9 +55,9 @@ export default function Career() {
           </p>
         </div>
 
-        {/* Cards Section */}
+        
         <div className="mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card 1 */}
+          
           <div className="bg-black text-white p-8 rounded-lg flex flex-col">
             <div className="mb-8">
               <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
@@ -71,7 +71,7 @@ export default function Career() {
             </p>
           </div>
 
-          {/* Card 2 */}
+          
           <div className="bg-black text-white p-8 rounded-lg flex flex-col">
             <div className="mb-8">
               <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
@@ -85,7 +85,7 @@ export default function Career() {
             </p>
           </div>
 
-          {/* Card 3 */}
+          
           <div className="bg-black text-white p-8 rounded-lg flex flex-col">
             <div className="mb-8">
               <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
@@ -100,7 +100,7 @@ export default function Career() {
             </p>
           </div>
 
-          {/* Card 4 */}
+          
           <div className="bg-black text-white p-8 rounded-lg flex flex-col">
             <div className="mb-8">
               <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
@@ -116,7 +116,7 @@ export default function Career() {
           </div>
         </div>
 
-        {/* How to Apply Section */}
+        
         <div className="mx-auto mt-20">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             How to Apply

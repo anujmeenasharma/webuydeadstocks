@@ -25,7 +25,7 @@ html.lenis body {
   pointer-events: none;
 }
 
-/* Hide Google Translate Banner and Visually Embedded Pieces */
+
 .goog-te-banner-frame {
   display: none !important;
 }

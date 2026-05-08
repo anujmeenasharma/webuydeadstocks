@@ -75,7 +75,7 @@ export default function AdminBlogsPage() {
             </button>
             <div className="max-w-6xl mx-auto space-y-8 mt-12 lg:mt-0">
 
-                {/* Header */}
+                
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <h1 className="text-2xl font-bold">Manage Blogs</h1>
                     <Link
@@ -87,10 +87,10 @@ export default function AdminBlogsPage() {
                     </Link>
                 </div>
 
-                {/* Filter & List Card */}
+                
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
 
-                    {/* Search Bar */}
+                    
                     <div className="p-4 border-b border-gray-200 flex items-center gap-2">
                         <div className="relative flex-1 max-w-md">
                             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -104,7 +104,7 @@ export default function AdminBlogsPage() {
                         </div>
                     </div>
 
-                    {/* Table */}
+                    
                     <div className="overflow-x-auto">
                         <table className="w-full text-left text-sm">
                             <thead className="bg-[#f9fafb] border-b border-gray-200">

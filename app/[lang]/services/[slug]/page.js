@@ -14,7 +14,7 @@ function getCategoryMatch(slug) {
 }
 
 function getServiceHtml(slug) {
-    // Prevent directory traversal
+
     const safeSlug = slug.replace(/[^a-zA-Z0-9-]/g, '');
     const filePath = path.join(process.cwd(), 'service-next', `${safeSlug}.html`);
     if (!fs.existsSync(filePath)) return null;
@@ -28,7 +28,7 @@ function getServiceHtml(slug) {
     }
     
     let content = rawHtml;
-    // We strictly get only the body content
+
     if (blogStartIndex !== -1 && blogEndIndex !== -1) {
         content = rawHtml.substring(blogStartIndex, blogEndIndex);
     } else {
@@ -36,10 +36,10 @@ function getServiceHtml(slug) {
         if (bodyMatch) content = bodyMatch[1];
     }
     
-    // Remove the <script> imports for Tailwind
+
     content = content.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
     
-    // Replace absolute internal links with relative links to Next.js routes
+
     content = content.replace(/href="https?:\/\/(www\.)?webuydeadstocks\.com\/(service|services)\/([^"]*)"/gi, 'href="/services/$3"');
     
     return content;
@@ -113,12 +113,12 @@ export default async function SlugPage({ params }) {
             
         return (
             <div className="min-h-screen flex flex-col overflow-x-hidden bg-white">
-                {/* Hero Section with Background Image */}
+                
                 <div className="relative h-[25vh] sm:h-[40vh] w-full">
-                    {/* Dark overlay */}
+                    
                     <div className="absolute inset-0 bg-black/80" />
 
-                    {/* Content overlay */}
+                    
                     <div className="relative h-full w-full px-6 sm:px-8 lg:px-12 flex flex-col justify-center">
                         <a
                             href="/services"
@@ -140,7 +140,7 @@ export default async function SlugPage({ params }) {
                     </div>
                 </div>
 
-                {/* White Content Section */}
+                
                 <div className="bg-white">
                     <div 
                         className="w-full lg:w-[100%] py-16"

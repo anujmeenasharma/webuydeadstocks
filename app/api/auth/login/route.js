@@ -17,11 +17,11 @@ export async function POST(request) {
 
     await connectToDatabase();
 
-    // Development/Seeding utility
-    // If no admin exists at all, create the default one provided
+
+
     const adminCount = await Admin.countDocuments();
     if (adminCount === 0) {
-      if (email === 'info@webuydeadstocks' || email === 'info@webuydeadstocks.com') { // User provided 'info@webuydeadstocks' as gmail
+      if (email === 'info@webuydeadstocks' || email === 'info@webuydeadstocks.com') {
         const hashedPassword = await bcrypt.hash('wbds@2456', 10);
         await Admin.create({ email: 'info@webuydeadstocks', password: hashedPassword });
       }
@@ -45,10 +45,10 @@ export async function POST(request) {
       );
     }
 
-    // Generate JWT
+
     const token = await signToken({ adminId: admin._id, email: admin.email });
 
-    // Set HTTP-Only Cookie
+
     const response = NextResponse.json(
       { message: 'Login successful' },
       { status: 200 }
@@ -61,7 +61,7 @@ export async function POST(request) {
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
       path: '/',
-      maxAge: 60 * 60 * 24, // 24 hours
+      maxAge: 60 * 60 * 24,
     });
 
     return response;

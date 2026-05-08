@@ -41,7 +41,7 @@ const BlogSchema = new mongoose.Schema(
     }
 );
 
-// Prevent re-compilation of the model if it already exists
+
 const Blog = mongoose.models.Blog || mongoose.model("Blog", BlogSchema);
 
 export default Blog;

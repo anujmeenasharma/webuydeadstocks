@@ -16,10 +16,10 @@ const Navbar = () => {
   const isArabic = pathname === "/arabic" || pathname.startsWith("/arabic/");
 
   const handleSwitchLanguage = (lang) => {
-    // 1. Set our custom routing cookie
+
     document.cookie = `NEXT_LOCALE=${lang}; path=/; max-age=31536000`;
 
-    // 2. Set the Google Translate cookie so it auto-translates on the next load
+
     const domain = window.location.hostname;
     document.cookie = `googtrans=/en/${lang}; path=/; domain=${domain}`;
     document.cookie = `googtrans=/en/${lang}; path=/; domain=.${domain}`;
@@ -37,7 +37,7 @@ const Navbar = () => {
 
 
 
-    // Hard navigation to ensure RTL layout refresh and middleware cookie catching
+
     window.location.href = newPath;
   };
 
@@ -136,14 +136,14 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* OVERLAY */}
+      
       <div
         className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${isSidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
         onClick={toggleSidebar}
       />
 
-      {/* SIDEBAR CONTAINER */}
+      
       <div
         ref={container}
         className={`fixed top-0 right-0 h-screen w-full bg-[#118B50] z-50 transform transition-transform duration-500 ease-in-out flex flex-col ${isSidebarOpen ? "translate-x-0" : "translate-x-full"

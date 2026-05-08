@@ -22,14 +22,14 @@ const MapSection = () => {
             }
         });
 
-        // First transition in the map scale and opacity, starting from 0 opacity
-        // Notice we delay this to sync with the end of the previous `ScrollMaps` pin.
+
+
         tl.fromTo(".map-section-content",
             { scale: 2, autoAlpha: 0 },
             { scale: 1, autoAlpha: 1, duration: 1, ease: 'power2.inOut' },
-            0 // Starts immediately upon triggering
+            0
         )
-            // Transition straight into the right translation map over the remainder of timeline segment
+
             .to(mapRef.current, {
                 x: '-10vw',
                 ease: "none",
